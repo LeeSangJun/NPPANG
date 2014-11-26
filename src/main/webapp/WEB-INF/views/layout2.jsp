@@ -19,24 +19,7 @@
 			<span class="username">{}님 환영합니다.</span>
 			<span class="logout">로그아웃</span>
 		</div>
-		<div id="menu" class="col-md-3 left">
-			<ul>
-				<li><a href="#">메뉴</a></li>
-				<li><a href="#">메뉴</a></li>
-				<li><a href="#">메뉴</a></li>
-				<li><a href="#">메뉴</a></li>
-				<li><a href="#">메뉴</a></li>
-				<li>
-					<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-						메뉴 보기
-					</button>
-				</li>
-			</ul>
-			<div class="short-window">
-				여기는 작은 명령창입니다.
-			</div>
-		</div>
-		<div id="contents" class="col-md-9 right">
+		<div id="contents" class="col-md-12 right">
 			<!-- Button trigger modal -->
 
 			<!-- Modal -->
