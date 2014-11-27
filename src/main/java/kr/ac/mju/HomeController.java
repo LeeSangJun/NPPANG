@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -35,6 +36,14 @@ public class HomeController {
 
 		return "index";
 	}
+
+
+	@RequestMapping(value = "/{viewname}/", method = RequestMethod.GET)
+	public String layout_router(@PathVariable String viewname) {
+		System.out.println("url" + viewname);
+		return viewname;
+	}
+
 
 	@RequestMapping(value = "/layout", method = RequestMethod.GET)
 	public String layout() {
