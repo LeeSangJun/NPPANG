@@ -1,0 +1,8 @@
+#Spring
+/target
+*.class
+Thumbs.db
+.settings
+.classpath
+.project
+.springBeans
