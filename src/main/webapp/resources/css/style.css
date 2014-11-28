@@ -1,0 +1,14 @@
+@CHARSET "EUC-KR";
+.loginbox {
+	float : center;
+	margin-top : 800px;
+	
+}
+
+.btn {
+	color : green;
+}
+
+.box_top{
+	color : green;
+}
