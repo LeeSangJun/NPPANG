@@ -46,7 +46,7 @@ public class HomeController {
 	@RequestMapping(value = "/layout", method = RequestMethod.GET)
 	public String layout() {
 		System.out.println("update test");
-		return "layout";
+		return "layout_v_3";
 	}
 
 }
