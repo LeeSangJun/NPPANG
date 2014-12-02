@@ -4,9 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>Nppang</title>
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
 </head>
 <body>
+	<div class="container">
+		<header>
+			<nav><a>Login</a></nav>
+			<nav><a>Join</a></nav>
+			<span>Nppang</span>
+		</header>
+	</div>
 
 </body>
 </html>
