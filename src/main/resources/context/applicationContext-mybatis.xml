@@ -47,4 +47,7 @@
     <bean id="testDAO" class="kr.ac.mju.dao.testDAO">
         <property name="sqlSession" ref="sqlSession" />
     </bean>
+    <bean id="userDAO" class="kr.ac.mju.dao.userDAO">
+        <property name="sqlSession" ref="sqlSession" />
+    </bean>
 </beans>
