@@ -1,0 +1,19 @@
+@CHARSET "EUC-KR";
+.slide{
+	position: relative;
+}
+.slide h2,
+.slide p,
+.slide .link,
+.slide .back_image{
+	position: absolute;
+	opacity: 1;
+	left: 10%;
+}
+.slide .back_image{
+	left: 60%;
+}
+.dots,
+.arrows{
+	display: none;
+}

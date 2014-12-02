@@ -4,17 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Nppang</title>
-	<link rel="stylesheet" type="text/css" href="css/default.css" />
+<title>Insert title here</title>
 </head>
 <body>
-	<div class="container">
-		<header>
-			<nav><a>Login</a></nav>
-			<nav><a>Join</a></nav>
-			<span>Nppang</span>
-		</header>
-	</div>
+<% if(request.getAttribute("name") != null){ %>
+			<%= request.getAttribute("name") %>
+		<%}else{ %>
+			bad
+		<%} %>
 
 </body>
 </html>

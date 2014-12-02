@@ -1,5 +1,7 @@
 package kr.ac.mju;
 
+import java.util.Locale;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -27,7 +29,6 @@ public class LoginController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public ModelAndView home(Model model, HttpSession session, HttpServletRequest reqest, @RequestParam("userId") String userId) {
 		ModelAndView modelAndView = new ModelAndView();
@@ -48,7 +49,6 @@ public class LoginController {
 
 		return modelAndView;
 	}
-
 	@RequestMapping(value = "/logout", method = RequestMethod.POST)
 	public ModelAndView logout(HttpSession session, HttpServletRequest reqest) {
 		ModelAndView modelAndView = new ModelAndView();
@@ -56,6 +56,7 @@ public class LoginController {
 		modelAndView.setViewName("index");
 		return modelAndView;
 	}
+
 	@Autowired
 	userDAO dao;
 
