@@ -19,9 +19,9 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class LoginController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
-	
+
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -50,6 +50,18 @@ public class LoginController {
 		ModelAndView modelAndView = new ModelAndView();
 		session.invalidate();
 		modelAndView.setViewName("index");
+		return modelAndView;
+	}
+	@Autowired
+	userDAO dao;
+
+	@RequestMapping(value = "/testuser", method = RequestMethod.GET)
+	public ModelAndView getUser(HttpSession session, HttpServletRequest reqest){
+		ModelAndView modelAndView = new ModelAndView();
+		User_Info user = dao.getUserId(1);
+		modelAndView.addObject("name", user.getName());
+		modelAndView.setViewName("usertest");
+
 		return modelAndView;
 	}
 }
