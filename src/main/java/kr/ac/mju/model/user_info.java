@@ -7,7 +7,10 @@ public class User_Info {
 	String password;
 	String description;
 	String text;
+	String Photo;
 
+	public String getPhoto() {	return Photo;}
+	public void setPhoto(String photo) {	Photo = photo;	}
 	public void setName(String name){this.name = name;}
 	public String getName(){return name;}
 
