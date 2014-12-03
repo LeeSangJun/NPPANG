@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
- 
+
 /**
  * Handles requests for the application home page.
  */
@@ -36,12 +36,12 @@ public class LoginController {
 				session.setAttribute("userId", userId);
 				modelAndView.setViewName("index");
 			}else{
-				modelAndView.addObject("error", "Id瑜�李얠쓣 ���놁뒿�덈떎.");
+				modelAndView.addObject("error", "Id를 찾을 수 없습니다.");
 				modelAndView.setViewName("index");
 				return modelAndView;
 			}
 		}else{
-			modelAndView.addObject("error", "�대� 濡쒓렇�몃릺���덉뒿�덈떎.");
+			modelAndView.addObject("error", "이미 로그인되어 있습니다.");
 			modelAndView.setViewName("index");
 			return modelAndView;
 		}

@@ -1,6 +1,7 @@
 package kr.ac.mju.dao;
 
-import kr.ac.mju.model.User_Info;
+import kr.ac.mju.model.test;
+import kr.ac.mju.model.user_info;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -11,7 +12,7 @@ public class userinfoDAO {
 		this.sqlSession = sqlSession;
 	}
 
-	public int insert_userInfo(User_Info user){
+	public int insert_userInfo(user_info user){
 		int id = -1;
 
 		id = sqlSession.insert("mybatistest.userInfo_insert", user );
