@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="user_info">
 <!-- parameterType:마이바티스에게 전달하는 객체 또는 자료형 -->
-    <select id="getUserId" resultType="kr.ac.mju.model.user_info">
+    <select id="getUserId" resultType="kr.ac.mju.model.User_Info">
     	select user_id, name from test where nuser_id = #{id}
     </select>
 

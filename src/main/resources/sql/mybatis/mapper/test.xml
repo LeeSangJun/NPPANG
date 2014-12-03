@@ -6,7 +6,7 @@
     	select name, title from test where name = "test1"
     </select>
 
-	<insert id="userInfo_insert" parameterType="kr.ac.mju.model.user_info" useGeneratedKeys="true" keyProperty="user_id">
+	<insert id="userInfo_insert" parameterType="kr.ac.mju.model.User_Info" useGeneratedKeys="true" keyProperty="user_id">
         INSERT INTO user_info (name, email, pwd, description, photo) VALUES (#{name}, #{email}, #{pwd}, #{description}, #{photo});
     </insert>
 </mapper>
