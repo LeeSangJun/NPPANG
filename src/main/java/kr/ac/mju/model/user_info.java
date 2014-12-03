@@ -1,19 +1,17 @@
 package kr.ac.mju.model;
 
-public class User_Info {
+public class user_info {
 	int user_id;
 	String name;
 	String email;
 	String password;
 	String description;
 	String text;
-	String Photo;
+	String photo;
 
-	public String getPhoto() {	return Photo;}
-	public void setPhoto(String photo) {	Photo = photo;	}
 	public void setName(String name){this.name = name;}
 	public String getName(){return name;}
-
+ 
 	public int getUser_id() {	return user_id;	}
 	public void setUser_id(int user_id) {	this.user_id = user_id;	}
 
@@ -28,4 +26,7 @@ public class User_Info {
 
 	public String getText() {	return text;	}
 	public void setText(String text) {	this.text = text;	}
+	
+	public String getPhoto() {	return photo;	}
+	public void setPhoto(String photo) {	this.photo = photo;	}
 }

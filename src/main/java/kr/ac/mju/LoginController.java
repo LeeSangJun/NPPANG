@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import kr.ac.mju.dao.userDAO;
-import kr.ac.mju.model.User_Info;
+import kr.ac.mju.model.user_info;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -62,7 +62,7 @@ public class LoginController {
 	@RequestMapping(value = "/testuser", method = RequestMethod.GET)
 	public ModelAndView getUser(HttpSession session, HttpServletRequest reqest){
 		ModelAndView modelAndView = new ModelAndView();
-		User_Info user = dao.getUserId(1);
+		user_info user = dao.getUserId(1);
 		modelAndView.addObject("name", user.getName());
 		modelAndView.setViewName("usertest");
 

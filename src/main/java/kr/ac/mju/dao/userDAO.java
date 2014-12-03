@@ -1,6 +1,6 @@
 package kr.ac.mju.dao;
 
-import kr.ac.mju.model.User_Info;
+import kr.ac.mju.model.user_info;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -11,7 +11,7 @@ public class userDAO {
 		this.sqlSession = sqlSession;
 	}
 
-	public User_Info getUserId(int number){
-		return (User_Info)sqlSession.selectOne("user_info.getUserId", number);
+	public user_info getUserId(int number){
+		return (user_info)sqlSession.selectOne("user_info.getUserId", number);
 	}
 }
