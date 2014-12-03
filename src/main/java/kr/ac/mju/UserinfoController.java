@@ -1,10 +1,7 @@
 package kr.ac.mju;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
 import kr.ac.mju.dao.userinfoDAO;
-import kr.ac.mju.model.user_info;
+import kr.ac.mju.model.User_Info;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,10 +36,10 @@ public class UserinfoController {
 		ModelAndView modelAndView = new ModelAndView();
 
 		//insert Database
-		user_info user = new user_info();
+		User_Info user = new User_Info();
 		user.setName(name);
 		user.setEmail(email);;
-		user.setPwd(pwd);
+		user.setPassword(pwd);
 		user.setDescription(dec);
 		user.setPhoto(photo);
 
