@@ -42,7 +42,7 @@ public class UserinfoController {
 		user_info user = new user_info();
 		user.setName(name);
 		user.setEmail(email);;
-		user.setPwd(pwd);
+		user.setPassword(pwd);
 		user.setDescription(dec);
 		user.setPhoto(photo);
 
