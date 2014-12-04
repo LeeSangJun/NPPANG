@@ -5,9 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Nppang</title>
-<link rel="stylesheet" type="text/css" href="css/default.css" />
-<link rel="stylesheet" type="text/css" href="css/mypage.css" />
-<script src="js/modernizr.custom.js"></script>
+<link rel="stylesheet" type="text/css" href="resources/css/default.css" />
+<link rel="stylesheet" type="text/css" href="resources/css/mypage.css" />
+<script src="resources/js/modernizr.custom.js"></script>
 </head>
 <body>
 <header>
@@ -25,18 +25,18 @@
 </div>
 <div class="my_bang">
 	<ul class="grid effect" id="grid">
-		<li><a href="#"><img src="images/8.jpg"></a></li>
-		<li><a href="#"><img src="images/9.jpg"></a></li>
-		<li><a href="#"><img src="images/10.png"></a></li>
-		<li><a href="#"><img src="images/11.png"></a></li>
-		<li><a href="#"><img src="images/12.png"></a></li>
-		<li><a href="#"><img src="images/8.jpg"></a></li>
-		<li><a href="#"><img src="images/9.jpg"></a></li>
-		<li><a href="#"><img src="images/10.png"></a></li>
-		<li><a href="#"><img src="images/11.png"></a></li>
-		<li><a href="#"><img src="images/12.png"></a></li>
-		<li><a href="#"><img src="images/8.jpg"></a></li>
-		<li><a href="#"><img src="images/9.jpg"></a></li>
+		<li><a href="#"><img src="resources/img/8.jpg"></a></li>
+		<li><a href="#"><img src="resources/img/9.jpg"></a></li>
+		<li><a href="#"><img src="resources/img/10.png"></a></li>
+		<li><a href="#"><img src="resources/img/11.png"></a></li>
+		<li><a href="#"><img src="resources/img/12.png"></a></li>
+		<li><a href="#"><img src="resources/img/8.jpg"></a></li>
+		<li><a href="#"><img src="resources/img/9.jpg"></a></li>
+		<li><a href="#"><img src="resources/img/10.png"></a></li>
+		<li><a href="#"><img src="resources/img/11.png"></a></li>
+		<li><a href="#"><img src="resources/img/12.png"></a></li>
+		<li><a href="#"><img src="resources/img/8.jpg"></a></li>
+		<li><a href="#"><img src="resources/img/9.jpg"></a></li>
 	</ul>
 </div>
 
