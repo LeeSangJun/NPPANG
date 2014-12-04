@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 .clearfix:before, .clearfix:after { content: " "; display: table; }
@@ -25,55 +26,47 @@ header > span {
 }
 .side {
 	float: left;
-	width: 25%;
-	padding-right: 20px;
-	min-width: 320px;
-	border-right: solid 5px; 
+	width: 22%;
+	height: 100%;
+	border-right: solid 5px;
 	border-right-color: #2cba7c;
 
 }
 .menu {
-	width: 100%;
-	height: 500px;
-	max-width: 400px;
-	min-width: 300px;
-	position: relative;
-	font-size: 1.3em;
-	line-height: 2.5;
-	font-weight: 400;
+	text-align: center;
+	background: rgba(0,0,0,0.01);
+}
+.menu h3 {
 	color: #2cba7c;
-	padding-top: 2em;
-}
-.menu ul {
-	padding: 0;
-	margin: 0 3em 0 0;
-	list-style: none;
-	position: relative;
-	z-index: 0;
-}
-.menu ul li {
+	font-size: 1.9em;
+	padding: 20px;
+	margin: 0;
+	font-family: 'Hanna', serif;
+	line-height: 50px;
 	display: block;
-	margin: 0 0 5px 0;
 }
-.menu ul li a {
-	display: inline-block;
-	padding: 0 20px;
-	color: #2cba7c;
+.menu a {
+	border-bottom: 1px solid gray;
+	width: 100%;
+	color: gray;
+	padding: 1em;
+	font-size: 1.1em;
+	display: block;
+	font-weight: 300;
+	text-decoration: none;
+	font-family: 'Lato', serif;
+}
 
-	font-family: 'Hanna', serif
-}
 .my_bang{
 	margin: 0 auto;
 }
 .grid {
-	max-width: 69em;
 	margin: auto;
-	padding: 0;
 }
 .grid li {
 	display: block;
 	float: left;
-	width: 33%;
+	width: 20.09%;
 }
 .grid li.shown,
 .no-js .grid li,
@@ -86,21 +79,45 @@ header > span {
 	outline: none;
 	border: none;
 	display: block;
-	max-width: 100%;
+	width: 100%;
 }
-.grid.effect-2 li.animate {
-	-webkit-transform: translateY(200px);
-	transform: translateY(200px);
-	-webkit-animation: moveUp 0.65s ease forwards;
-	animation: moveUp 0.65s ease forwards;
+.grid figure {
+	display: block;
+	float: left;
+	margin: 0 1% 10px 1%;
+	cursor: pointer;
+	overflow: hidden;
+}
+.grid figure img {
+	display: block;
+}
+.grid figure figcaption {
+	position: absolute;
+	font-size: 16px;
+	font-weight: 400;
+	left: auto;
+	width: 100%;
+	height: 60px;
+	bottom: -60px;
+	padding: 20px;
+	color: #ddd;
+	background: #18bcbc;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transition: bottom 0.2s ease;
+	-moz-transition: bottom 0.2s ease-in-out;
+	-ms-transition: bottom 0.2s ease-in-out;
+	-o-transition: bottom 0.2s ease-in-out;
+	transition: bottom 0.2s ease-in-out;
 }
 
-@-webkit-keyframes moveUp {
-	0% { }
-	100% { -webkit-transform: translateY(0); opacity: 1; }
+.grid figure figcaption a {
+	color: #fff;
 }
 
-@keyframes moveUp {
-	0% { }
-	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+.grid figure figcaption a:hover {
+	color: #ffd468;
+}
+
+.grid figure:hover figcaption {
+	bottom: 0px;
 }
