@@ -38,7 +38,7 @@ public class HomeController {
 		return "index";
 	}
 
-	@RequestMapping(value = "/{viewname}/", method = RequestMethod.GET)
+	@RequestMapping(value = "/{viewname}", method = RequestMethod.GET)
 	public String layout_router(@PathVariable String viewname) {
 		System.out.println("url" + viewname);
 		return viewname;

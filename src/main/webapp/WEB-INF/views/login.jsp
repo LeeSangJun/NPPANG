@@ -11,8 +11,8 @@
 </head>
 <body>
 <header>
-		<nav><a href="./login.jsp">Login</a></nav>
-		<nav><a>Join</a></nav>
+		<nav><a href="./login">Login</a></nav>
+		<nav><a href="./login#toregister">Join</a></nav>
 		<span>Nppang</span>
 </header>
 <section>
