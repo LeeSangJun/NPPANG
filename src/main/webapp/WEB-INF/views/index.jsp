@@ -25,11 +25,11 @@
 				<div class="back_image"></div>
 			</div>
 			<div class="slide">
-				<h2>TEST01</h2>
+				<h2>TEST02</h2>
 				<div class="back_image"></div>
 			</div>
 			<div class="slide">
-				<h2>TEST01</h2>
+				<h2>TEST03</h2>
 				<div class="back_image"></div>
 			</div>
 			<nav class="arrows">
