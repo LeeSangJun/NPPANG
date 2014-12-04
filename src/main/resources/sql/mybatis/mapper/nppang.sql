@@ -1,3 +1,5 @@
+create database nppang;
+use nppang;
 create table user_info (
 	id integer auto_increment primary key,
 	name varchar(30) not null,
@@ -96,7 +98,7 @@ insert into financial_log(user_id, moim_id, money, description) values(1,1,10000
 insert into financial_log(user_id, moim_id, money, description) values(2,1,10000,"fee");
 insert into financial_log(user_id, moim_id, money, description) values(3,1,10000,"fee");
 insert into financial_log(user_id, moim_id, money, description) values(4,1,10000,"fee");
-insert into financial_log(user_id, moim_id, money, description) values(3,1,10000,"회비");
+insert into financial_log(user_id, moim_id, money, description) values(3,1,10000, "회비");
 
 select * from financial_log;
 
