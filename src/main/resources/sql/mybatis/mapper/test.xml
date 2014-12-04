@@ -5,4 +5,6 @@
     <select id="getTestData" resultType="kr.ac.mju.model.test">
     	select name, title from test where name = "test1"
     </select>
+
+
 </mapper>

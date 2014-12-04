@@ -42,6 +42,8 @@
         <property name="transactionManager" ref="transactionManager" />
     </bean>
 
+
+	<!-- DAO property -->
     <bean id="testDAO" class="kr.ac.mju.dao.testDAO">
         <property name="sqlSession" ref="sqlSession" />
     </bean>
