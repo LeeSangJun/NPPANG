@@ -38,7 +38,7 @@
 				</form>
 			</div>
 			<div id="register" class="animate form">
-                <form action = "Join" method = "post">
+                <form action = "./Join" method = "post">
                 	<!--
                 		@RequestParam("name") String name,
 						@RequestParam("email") String email,

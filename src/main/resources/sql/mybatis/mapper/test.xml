@@ -3,10 +3,7 @@
 <mapper namespace="mybatistest">
 <!-- parameterType:마이바티스에게 전달하는 객체 또는 자료형 -->
     <select id="getTestData" resultType="kr.ac.mju.model.test">
-    	select name, title from test where name = "test1"
+    	select name, title from test where name = 1
     </select>
 
-	<insert id="userInfo_insert" parameterType="kr.ac.mju.model.user_info" useGeneratedKeys="true" keyProperty="user_id">
-        INSERT INTO user_info (name, email, password, description, photo) VALUES (#{name}, #{email}, #{password}, #{description}, #{photo});
-    </insert>
 </mapper>

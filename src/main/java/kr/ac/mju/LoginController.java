@@ -3,8 +3,11 @@ package kr.ac.mju;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import kr.ac.mju.dao.testDAO;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +20,9 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class LoginController {
+
+	@Autowired
+	private testDAO dao;
 
 	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
@@ -47,11 +53,12 @@ public class LoginController {
 
 
 	@RequestMapping(value = "/logout", method = RequestMethod.POST)
-	public ModelAndView logout(HttpSession session, HttpServletRequest reqest) {
+	public ModelAndView logout(HttpSession session, HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView();
 		session.invalidate();
 		modelAndView.setViewName("index");
 		return modelAndView;
 	}
+
 
 }

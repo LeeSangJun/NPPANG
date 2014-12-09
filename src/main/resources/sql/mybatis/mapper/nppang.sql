@@ -20,7 +20,7 @@ create table moim (
 	references user_info(id)
 );
 drop table moim;
-drop table user_info;
+select * from user_info;
 create table moim_member(
 	user_id integer not null,
 	moim_id integer not null,
