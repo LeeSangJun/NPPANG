@@ -30,7 +30,7 @@ public class LoginController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@RequestMapping(value = "/login1", method = RequestMethod.POST)
 	public ModelAndView home(Model model, HttpSession session, HttpServletRequest reqest, @RequestParam("userId") String userId) {
 		ModelAndView modelAndView = new ModelAndView();
 		if(session.getAttribute("userID") == null){
