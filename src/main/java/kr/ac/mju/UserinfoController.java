@@ -52,4 +52,25 @@ public class UserinfoController {
 
 		return modelAndView;
 	}
+
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public ModelAndView user_login(
+			@RequestParam("username") String email,
+			@RequestParam("password") String pwd
+			){
+
+
+		ModelAndView modelAndView = new ModelAndView();
+
+		//insert Database
+		user_info user = new user_info();
+		user.setEmail(email);;
+		user.setPassword(pwd);
+
+		user = userInfodao.select_userInfo(user);
+
+		modelAndView.setViewName("index");
+
+		return modelAndView;
+	}
 }

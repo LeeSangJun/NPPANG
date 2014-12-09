@@ -17,4 +17,10 @@ public class userinfoDAO {
 		id = sqlSession.insert("user_info.userInfo_insert", user );
 		return id;
 	}
+
+	public user_info select_userInfo(user_info user){
+		user_info userinfo;
+		userinfo = (user_info) sqlSession.selectOne("user_info.userInfo_select");
+		return userinfo;
+	}
 }
