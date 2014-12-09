@@ -21,7 +21,7 @@
 		<a class="hiddenanchor" id="tologin"></a>
 		<div id="wrapper">
 			<div id="login" class="animate form">
-				<form>
+				<form action = "Login" method = "post">
 					<h1>Login</h1>
 					<p>
 						<label class="uname">Your ID</label><input id="username" name="username" placeholder="User ID">
@@ -30,7 +30,7 @@
 						<label class="pawssword">Your Password</label><input id="password" name="password" type="password"placeholder="User password">
 					</p>
 					<p class="login button">
-                        <input type="submit" value="Login" />
+                        <input type="submit" value="Login"/>
 					</p>
 					<p>
 						<a href="#toregister" class="to_register" id="button">Join us</a>
@@ -38,23 +38,34 @@
 				</form>
 			</div>
 			<div id="register" class="animate form">
-                <form>
+                <form action = "Join" method = "post">
+                	<!--
+                		@RequestParam("name") String name,
+						@RequestParam("email") String email,
+						@RequestParam("pwd") String pwd,
+						@RequestParam("description") String dec,
+						@RequestParam("photo") String photo
+					 -->
                     <h1> Sign up </h1>
                     <p>
                         <label for="usernamesignup" class="uname">Your username</label>
-                        <input id="usernamesignup" name="usernamesignup" type="text"/>
+                        <input id="usernamesignup" name="name" type="text"/>
                     </p>
                     <p>
                         <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
-                        <input id="emailsignup" name="emailsignup" required="required" type="email"/>
+                        <input id="emailsignup" name="email" required="required" type="email"/>
                     </p>
                     <p>
                         <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                        <input id="passwordsignup" name="passwordsignup" required="required" type="password"/>
+                        <input id="passwordsignup" name="pwd" required="required" type="password"/>
                     </p>
                     <p>
-                        <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-                        <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password"/>
+                        <label for="descriptipon" class="description" data-icon="p">Please confirm your password </label>
+                        <input id="description" name="description" required="required" type="text"/>
+                    </p>
+                    <p>
+                        <label for="photo" class="photo" data-icon="p">Please confirm your password </label>
+                        <input id="photo" name="photo" required="required" type="text"/>
                     </p>
                     <p class="signin button">
 						<input type="submit" value="Sign up"/>
