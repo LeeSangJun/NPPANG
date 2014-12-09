@@ -9,7 +9,7 @@
 <body>
 	<div>회원가입</div>
 	<div>
-		<form action = "../Join" method = "POST">
+		<form action = "Join" method = "POST">
 			email : <input type = "text" name = "email"></input>
 			name:<input type = "text" name = "name"></input>
 			pwd:<input type = "text" name = "pwd"></input>

@@ -7,8 +7,9 @@ create table user_info (
 	password varchar(30) not null,
 	description text,
 	photo text);
+
 create table moim (
-	moim_id integer auto_increment primary key,
+	moim_id integer auto_increment primary key,	
 	moim_name varchar(30) not null,
 	category varchar(30) not null,
 	photo text,
@@ -67,7 +68,7 @@ create table financial_log(
 	references user_info(id),
 	constraint log_moim_id foreign key(moim_id)
 	references moim(moim_id)
-	
+
 );
 insert into user_info(name,email,password) values("admin1","1","123");
 insert into user_info(name,email,password) values("admin2","2","123");
@@ -99,7 +100,7 @@ insert into financial_log(user_id, moim_id, money, description) values(2,1,10000
 insert into financial_log(user_id, moim_id, money, description) values(3,1,10000,"fee");
 insert into financial_log(user_id, moim_id, money, description) values(4,1,10000,"fee");
 insert into financial_log(user_id, moim_id, money, description) values(3,1,10000, "fee2");
-ALTER TABLE `nppang`.`user_info` 
+ALTER TABLE `nppang`.`user_info`
 CHARACTER SET = utf8 ;
 select * from financial_log;
 
