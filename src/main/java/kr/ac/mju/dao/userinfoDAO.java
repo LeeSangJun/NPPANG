@@ -13,7 +13,6 @@ public class userinfoDAO {
 
 	public int insert_userInfo(user_info user){
 		int id = -1;
-
 		id = sqlSession.insert("user_info.userInfo_insert", user );
 		return id;
 	}
@@ -22,5 +21,12 @@ public class userinfoDAO {
 		user_info userinfo;
 		userinfo = (user_info) sqlSession.selectOne("user_info.userInfo_select");
 		return userinfo;
+	}
+
+	public boolean is_loginAvailable(String userid, String userpwd){
+		if((user_info)sqlSession.selectOne()){
+			return true;
+		}
+		return false;
 	}
 }

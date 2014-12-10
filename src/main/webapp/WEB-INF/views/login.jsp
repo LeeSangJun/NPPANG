@@ -24,7 +24,7 @@
 				<form action = "./login" method = "post">
 					<h1>Login</h1>
 					<p>
-						<label class="uname">Your ID</label><input id="username" name="username" placeholder="User ID">
+						<label class="uname">Your ID</label><input id="username" name="usdrid" placeholder="User ID">
 					</p>
 					<p>
 						<label class="pawssword">Your Password</label><input id="password" name="password" type="password"placeholder="User password">

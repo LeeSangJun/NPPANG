@@ -27,8 +27,8 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 
-	@Autowired
-	private testDAO dao;
+	//@Autowired
+	//private testDAO dao;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView home(Locale locale, Model model) {
@@ -36,11 +36,11 @@ public class HomeController {
 
 		ModelAndView DBview = new ModelAndView();
 		test model1;
-		model1 = dao.getTestModel();
-		if(model1 != null){
-			DBview.addObject("name", model1.getName());
+	//	model1 = dao.getTestModel();
+	//	if(model1 != null){
+		//	DBview.addObject("name", model1.getName());
 			DBview.setViewName("index");
-		}
+	//	}
 
 
 		return DBview;

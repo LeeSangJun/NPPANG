@@ -3,7 +3,7 @@ package kr.ac.mju;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import kr.ac.mju.dao.testDAO;
+import kr.ac.mju.dao.userinfoDAO;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class LoginController {
 
 	@Autowired
-	private testDAO dao;
+	private userinfoDAO dao;
 
 	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
@@ -30,12 +30,22 @@ public class LoginController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 
+	/*
+	 *	login
+	 *	paramater : userId, pwd
+	 */
+
 	@RequestMapping(value = "/login1", method = RequestMethod.POST)
-	public ModelAndView home(Model model, HttpSession session, HttpServletRequest reqest, @RequestParam("userId") String userId) {
+	public ModelAndView Login(Model model, HttpSession session, HttpServletRequest reqest,
+			@RequestParam("userid") String userId,
+			@RequestParam("password") String pwd){
+
+
 		ModelAndView modelAndView = new ModelAndView();
-		if(session.getAttribute("userID") == null){
-			if(userId.equals("admin")){
-				session.setAttribute("userId", userId);
+		if(session.getAttribute("userid") == null){		//login 여부 checking
+			if(userId.equals("admin")){					//id 우무checking
+				//id password matching checking
+				session.setAttribute("userId", userId);	//세션 할당
 				modelAndView.setViewName("index");
 			}else{
 				modelAndView.addObject("error", "Id를 찾을 수 없습니다.");

@@ -9,7 +9,12 @@
 	<insert id="userInfo_insert" parameterType="kr.ac.mju.model.user_info" useGeneratedKeys="true" keyProperty="user_id">
         INSERT INTO user_info (name, email, password, description, photo) VALUES (#{name}, #{email}, #{password}, #{description}, #{photo});
     </insert>
+
 	<select id="userInfo_select" parameterType="kr.ac.mju.model.user_info" >
         SELECT * from user_info where email = '1@1.1';
+    </select>
+
+    <select id = "loginCheck" parameterType = "kr.ac.mju.model.user_info" resultType = "kr.ac.mju.model.user_info">
+    	SELECT * from user_info where email = #{email} and pwd = #{password}
     </select>
 </mapper>
