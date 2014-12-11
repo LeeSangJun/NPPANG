@@ -1,4 +1,4 @@
-package kr.ac.mju;
+package kr.ac.mju.controller;
 
 import java.util.Locale;
 
@@ -41,8 +41,6 @@ public class HomeController {
 		//	DBview.addObject("name", model1.getName());
 			DBview.setViewName("index");
 	//	}
-
-
 		return DBview;
 	}
 

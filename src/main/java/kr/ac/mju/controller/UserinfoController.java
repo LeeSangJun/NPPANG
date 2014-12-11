@@ -1,14 +1,12 @@
-package kr.ac.mju;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+package kr.ac.mju.controller;
 
 import kr.ac.mju.dao.userinfoDAO;
+import kr.ac.mju.dbconfig.MyBatisConnectionFactory;
 import kr.ac.mju.model.user_info;
 
+import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,9 +21,6 @@ public class UserinfoController {
 
 	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
-	@Autowired
-	private userinfoDAO userInfodao;
-
 	@RequestMapping(value = "/Join", method = RequestMethod.POST)
 	public ModelAndView user_join(
 			@RequestParam("name") String name,
@@ -35,9 +30,11 @@ public class UserinfoController {
 			@RequestParam("photo") String photo
 			){
 
+		/********중복코드**********/
+		SqlSession sqlSession = MyBatisConnectionFactory.getInstance().openSession(true);	//mybatis 세션 연결
+		userinfoDAO userinfo = sqlSession.getMapper(userinfoDAO.class);	//Mapper연결
 
 		ModelAndView modelAndView = new ModelAndView();
-
 		//insert Database
 		user_info user = new user_info();
 		user.setName(name);
@@ -46,31 +43,9 @@ public class UserinfoController {
 		user.setDescription(dec);
 		user.setPhoto(photo);
 
-		userInfodao.insert_userInfo(user);
+		userinfo.join(user);
 
 		modelAndView.setViewName("index");
-
-		return modelAndView;
-	}
-
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public ModelAndView user_login(
-			@RequestParam("username") String email,
-			@RequestParam("password") String pwd
-			){
-
-
-		ModelAndView modelAndView = new ModelAndView();
-
-		//insert Database
-		user_info user = new user_info();
-		user.setEmail(email);;
-		user.setPassword(pwd);
-
-		user = userInfodao.select_userInfo(user);
-
-		modelAndView.setViewName("index");
-
 		return modelAndView;
 	}
 }

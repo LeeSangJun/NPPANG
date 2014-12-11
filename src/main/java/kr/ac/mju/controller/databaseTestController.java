@@ -1,4 +1,4 @@
-package kr.ac.mju;
+package kr.ac.mju.controller;
 
 import kr.ac.mju.dao.testDAO;
 import kr.ac.mju.model.test;
@@ -19,18 +19,21 @@ public class databaseTestController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 
-	@Autowired
-	private testDAO dao;
+	//@Autowired
+//	private testDAO dao;
 
 	@RequestMapping(value = "/testMybatis", method = RequestMethod.GET)
 	public ModelAndView testDatabase() {
 		ModelAndView DBview = new ModelAndView();
 		test model;
-		model = dao.getTestModel();
+	/*	model = dao.getTestModel();
 		if(model != null){
 			DBview.addObject("test", model.getName());
 			DBview.setViewName("DBview");
 		}
+		return DBview;
+	}
+	*/
 		return DBview;
 	}
 }
