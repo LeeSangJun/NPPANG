@@ -7,7 +7,7 @@ create table user_info (
 	password varchar(30) not null,
 	description text,
 	photo text);
-
+SELECT * from user_info where email = "1@1.1" and password = 1;
 create table moim (
 	moim_id integer auto_increment primary key,	
 	moim_name varchar(30) not null,
