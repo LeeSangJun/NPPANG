@@ -1,5 +1,7 @@
 package kr.ac.mju.controller;
 
+import java.lang.reflect.Method;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -32,7 +34,7 @@ public class LoginController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 
-	@RequestMapping(value = "/login2", method = RequestMethod.POST)
+	@RequestMapping(value = "/login", method =RequestMethod.POST)
 	public ModelAndView user_login(
 			HttpSession session,
 			@RequestParam("userid") String email,
@@ -50,53 +52,24 @@ public class LoginController {
 		user_info user = new user_info();
 		user.setEmail(email);;
 		user.setPassword(pwd);
-
-		if(session.getAttribute("userid") == null){		//login 여부 checking
-			if(userinfo.loginCheck(user) != null){		//id - pwd 일치여부 확인
-				System.out.println("login_complete");
-
-				session.setAttribute("email", email);	//세션 할당
-				modelAndView.setViewName("private_page");
+			if(session.getAttribute("email") == null){		//login 여부 checking
+				if(userinfo.loginCheck(user) != null){		//id - pwd 일치여부 확인
+					System.out.println("login_complete");
+					session.setAttribute("email", email);	//세션 할당
+					modelAndView.setViewName("redirect:dashboard");
+				}else{
+					System.out.println("login_failed");
+					modelAndView.addObject("error", "login-error : please check your email or password");
+					modelAndView.setViewName("index");
+				}
 			}else{
-				System.out.println("login_failed");
-				modelAndView.addObject("error", "login-error : please check your email or password");
-				modelAndView.setViewName("index");
-
+				//개인화 페이지로 이동
+				modelAndView.setViewName("redirect:dashboard");
 			}
-		}else{
-			//개인화 페이지로 이동
-		}
 		return modelAndView;
 	}
 
-	@RequestMapping(value = "/login1", method = RequestMethod.POST)
-	public ModelAndView Login(Model model, HttpSession session, HttpServletRequest reqest,
-			@RequestParam("userid") String userId,
-			@RequestParam("password") String pwd){
-
-
-		ModelAndView modelAndView = new ModelAndView();
-		if(session.getAttribute("userid") == null){		//login 여부 checking
-			if(userId.equals("admin")){					//id 우무checking
-				//id password matching checking
-				session.setAttribute("userId", userId);	//세션 할당
-				modelAndView.setViewName("index");
-			}else{
-				modelAndView.addObject("error", "Id를 찾을 수 없습니다.");
-				modelAndView.setViewName("index");
-				return modelAndView;
-			}
-		}else{
-			modelAndView.addObject("error", "이미 로그인되어 있습니다.");
-			modelAndView.setViewName("index");
-			return modelAndView;
-		}
-
-		return modelAndView;
-	}
-
-
-	@RequestMapping(value = "/logout", method = RequestMethod.POST)
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public ModelAndView logout(HttpSession session, HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView();
 		session.invalidate();

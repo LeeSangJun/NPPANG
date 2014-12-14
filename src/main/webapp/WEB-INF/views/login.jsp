@@ -21,7 +21,7 @@
 		<a class="hiddenanchor" id="tologin"></a>
 		<div id="wrapper">
 			<div id="login" class="animate form">
-				<form action = "login2" method = "post">
+				<form action = "login" method = "post">
 					<h1>Login</h1>
 					<p>
 						<label class="uname">Your ID</label><input id="userid" name="userid" placeholder="User ID">

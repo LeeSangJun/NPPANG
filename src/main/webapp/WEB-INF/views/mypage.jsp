@@ -11,8 +11,8 @@
 </head>
 <body>
 <header>
-		<nav><a href="./login.jsp">Login</a></nav>
-		<nav><a>Join</a></nav>
+		<nav><a href="logout">LOGOUT</a></nav>
+		<nav><a href="logout">¥‘ æ»≥Á«œººø‰</a></nav>
 		<span>Nppang</span>
 </header>
 <div class="side">
