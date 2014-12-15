@@ -1,0 +1,153 @@
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+#dropdown-area{
+	padding-left: 40px;
+	position: absolute;
+	height: 25px;
+	left: 50%;
+	margin-left: -300px;
+}
+
+#dropdownmenu{
+	width: 650px;
+	border: 2px solid #4ab7c1;
+	z-index: 100;
+	background: white;
+	position: absolute;
+	left: 50%;
+	margin-left:-330px;
+}
+
+#dropdownmenu dl{
+	margin-top: 15px;
+	display: inline-block;
+}
+
+#dropdownmenu dl dd{
+	margin: 0 0 5px 0;
+}
+
+#dropdownmenu dl dd a{
+	color: black;
+	text-decoration: none;
+}
+
+#dropdownmenu dl dd a:hover{
+	color: #4ab7c1;
+	text-decoration: none;
+}
+.search-bar{
+	text-align: center;
+}
+
+.search-input{
+	padding: 5px;
+	top:50%;
+	width: 55%;
+	height: 40px;
+	border: 2px solid #2cba7c;
+	margin: 50px auto;
+}
+
+.search-icon{
+	background:#2cba7c;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	border: none;
+	margin: 50px auto;
+}
+
+.toggle-search{
+	float: left;
+	position: relative;
+	top:1px;
+	left: 859px;
+	z-index: 3;
+	width: 80px;
+	height: 23px;
+	vertical-align: middle;
+	background-color: #ffffff;
+	font-size:10pt;
+	text-align: center;
+}
+.list {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.list:before, .list:after { content: ''; display: table; }
+.list:after { clear: both; }
+.list > div {
+	flex: auto;
+	text-align: left;
+	margin: 0.25em;
+	padding: 2em 3em;
+	background: rgba(255,255,255,0.2);
+}
+.list h2 {
+	margin: 0 0 0.25em;
+	padding: 0 0 0.25em;
+	letter-spacing: 1px;
+	font-size: 90%;
+	text-transform: uppercase;
+	color: #9BA890;
+	font-family: 'Hanna', serif;
+}
+
+.list ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.list ul:not(:last-of-type) {
+	padding-bottom: 2em;
+}
+
+.list ul li a {
+	display: block;
+	font-weight: bold;
+	padding: 0.25em 0;
+	font-size: 145%;
+}
+
+.list ul li a.current-demo {
+	color: #fff;
+}
+.search-bar h1 {
+	font-size: 3.65em;
+	line-height: 1;
+	margin: 0;
+}
+
+.search-bar h1 span {
+	font-size: 40%;
+	margin: 0 auto;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	position: relative;
+	font-family: 'Hanna', serif; 
+}
+
+.search-bar h1 span::before,
+.search-bar h1 span::after {
+	content: '';
+	position: absolute;
+	width: 70%;
+	height: 3px;
+	top: 50%;
+	margin-top: -1px;
+	background: #2cba7c;
+}
+
+.search-bar h1 span::before {
+	right: 107%;
+}
+
+.search-bar h1 span::after {
+	left: 100%;
+}

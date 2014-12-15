@@ -1,0 +1,33 @@
+.search-bar h1 {
+	font-size: 3.65em;
+	line-height: 1;
+	margin: 0;
+}
+
+.search-bar h1 span {
+	font-size: 40%;
+	margin: 0 auto;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	position: relative;
+	font-family: 'Hanna', serif; 
+}
+
+.search-bar h1 span::before,
+.search-bar h1 span::after {
+	content: '';
+	position: absolute;
+	width: 70%;
+	height: 3px;
+	top: 50%;
+	margin-top: -1px;
+	background: #2cba7c;
+}
+
+.search-bar h1 span::before {
+	right: 107%;
+}
+
+.search-bar h1 span::after {
+	left: 100%;
+}

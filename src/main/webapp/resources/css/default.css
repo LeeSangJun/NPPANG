@@ -16,6 +16,7 @@ nav a {
 	font-size: 25px;
 	padding: 0px 20px 20px 20px;
 	float: right;
+	text-decoration: none;
 }
 header > span {
 	position: relative;
