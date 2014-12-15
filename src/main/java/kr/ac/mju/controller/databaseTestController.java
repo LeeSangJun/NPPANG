@@ -19,9 +19,6 @@ public class databaseTestController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 
-	//@Autowired
-//	private testDAO dao;
-
 	@RequestMapping(value = "/testMybatis", method = RequestMethod.GET)
 	public ModelAndView testDatabase() {
 		ModelAndView DBview = new ModelAndView();
