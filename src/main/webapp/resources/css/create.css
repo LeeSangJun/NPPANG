@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+form{
+	text-align: -webkit-center;
+}
+.m_image{
+	float: left;
+	width: 45%;
+	text-align: -webkit-center;
+	border: none;
+	margin: 40px auto;
+}
+.m_image form{
+	width: 180px;
+	height: 180px;
+	border: 2px dotted #2cba7c;
+	border-radius: 10px;
+	margin-bottom: 1.2em;
+}
+.m_image p{
+	font-family: 'Hanna', serif;
+	text-align: center;
+	padding: 60px 0 0 0;
+}
+.m_image div{
+	padding: 7%;
+}
+.m_image h2{
+	font-family: 'Hanna', serif; 
+	color: #2cba7c;
+	font-size: 1.3em;
+	text-align: left;
+}
+.m_image div input{
+	width: 100%;
+	height: 40px;
+	padding: 2px;
+	border: solid 1px gray;
+	border-radius: 3px;
+}
+.m_text{
+	width: 54%;
+	margin: 40px auto;
+	float: right;
+	text-align: -webkit-center;
+	border: none;
+	border-left: solid 2px;
+	border-left-color: #2cba7c;
+}
+.m_text h2{
+	font-family: 'Hanna', serif; 
+	color: #2cba7c;
+	font-size: 1.3em;
+	text-align: left;
+}
+.m_text div{
+	padding: 6% 4%;
+}
+.m_text div textarea{
+	width: 80%;
+	height: 60px;
+	padding: 2px;
+	border: solid 1px gray;
+	border-radius: 3px;
+	margin-bottom: 1.2em;
+}
+.m_text div input{
+	width: 100%;
+	height: 40px;
+	padding: 2px;
+	border: solid 1px gray;
+	border-radius: 3px;
+}
+button{
+	text-align: center;
+	width: 200px;
+	height: 50px;
+	font-size: 25px;
+	background-color: #2cba7c;
+	color: white;
+	font-family: "Hanna", serif;
+	border: none;
+}

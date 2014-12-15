@@ -11,8 +11,8 @@
 </head>
 <body>
 <header>
-		<nav><a href="./login">Login</a></nav>
-		<nav><a href="./login#toregister">Join</a></nav>
+		<nav><a href="logout">LOGOUT</a></nav>
+		<nav><a>${name}¥‘ æ»≥Á«œººø‰</a></nav>
 		<span>Nppang</span>
 </header>
 <div class="side">
