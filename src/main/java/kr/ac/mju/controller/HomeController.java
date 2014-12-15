@@ -44,7 +44,6 @@ public class HomeController {
 	public ModelAndView dashboard(){
 			ModelAndView view = new ModelAndView();
 			System.out.println("dashboard");
-
 			view.setViewName("mypage");
 			return view;
 	}

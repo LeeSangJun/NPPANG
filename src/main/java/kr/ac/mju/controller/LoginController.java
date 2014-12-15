@@ -52,10 +52,13 @@ public class LoginController {
 		user_info user = new user_info();
 		user.setEmail(email);;
 		user.setPassword(pwd);
+
 			if(session.getAttribute("email") == null){		//login 여부 checking
-				if(userinfo.loginCheck(user) != null){		//id - pwd 일치여부 확인
+				if((user = userinfo.loginCheck(user)) != null){		//id - pwd 일치여부 확인
 					System.out.println("login_complete");
 					session.setAttribute("email", email);	//세션 할당
+					session.setAttribute("name", user.getName());
+					//modelAndView.addObject("name", session.getAttribute("name"));
 					modelAndView.setViewName("redirect:dashboard");
 				}else{
 					System.out.println("login_failed");
@@ -64,10 +67,13 @@ public class LoginController {
 				}
 			}else{
 				//개인화 페이지로 이동
+				//modelAndView.addObject("name", session.getAttribute("name"));
 				modelAndView.setViewName("redirect:dashboard");
 			}
 		return modelAndView;
 	}
+
+
 
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public ModelAndView logout(HttpSession session, HttpServletRequest request) {

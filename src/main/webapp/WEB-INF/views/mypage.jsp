@@ -12,11 +12,7 @@
 <body>
 <header>
 		<nav><a href="logout">LOGOUT</a></nav>
-<<<<<<< HEAD
-		<nav><a href="logout"></a></nav>
-=======
-		<nav><a href="logout">¥‘ æ»≥Á«œººø‰</a></nav>
->>>>>>> 19240cb8e2644a81cc92d15568d40702f3c587e6
+		<nav><a>${name}¥‘ æ»≥Á«œººø‰</a></nav>
 		<span>Nppang</span>
 </header>
 <div class="side">
