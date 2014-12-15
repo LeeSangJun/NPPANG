@@ -23,22 +23,7 @@
 		<a href="#">new test03</a>
 	</nav>
 </div>
-<div class="my_bang">
-	<ul class="grid effect" id="grid">
-		<li><a href="#"><img src="resources/img/8.jpg"></a></li>
-		<li><a href="#"><img src="resources/img/9.jpg"></a></li>
-		<li><a href="#"><img src="resources/img/10.png"></a></li>
-		<li><a href="#"><img src="resources/img/11.png"></a></li>
-		<li><a href="#"><img src="resources/img/12.png"></a></li>
-		<li><a href="#"><img src="resources/img/8.jpg"></a></li>
-		<li><a href="#"><img src="resources/img/9.jpg"></a></li>
-		<li><a href="#"><img src="resources/img/10.png"></a></li>
-		<li><a href="#"><img src="resources/img/11.png"></a></li>
-		<li><a href="#"><img src="resources/img/12.png"></a></li>
-		<li><a href="#"><img src="resources/img/8.jpg"></a></li>
-		<li><a href="#"><img src="resources/img/9.jpg"></a></li>
-	</ul>
+<div class="">
 </div>
-
 </body>
 </html>
