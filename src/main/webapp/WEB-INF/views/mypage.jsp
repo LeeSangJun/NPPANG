@@ -12,7 +12,11 @@
 <body>
 <header>
 		<nav><a href="logout">LOGOUT</a></nav>
+<<<<<<< HEAD
 		<nav><a href="logout"></a></nav>
+=======
+		<nav><a href="logout">¥‘ æ»≥Á«œººø‰</a></nav>
+>>>>>>> 19240cb8e2644a81cc92d15568d40702f3c587e6
 		<span>Nppang</span>
 </header>
 <div class="side">
@@ -25,7 +29,7 @@
 </div>
 <div class="my_bang">
 	<ul class="grid effect" id="grid">
-		<li><a href="#"><img src="resources/img/8.jpg"></a></li>
+		<li><a href="#"><img src="resources/img/new.png"></a></li>
 		<li><a href="#"><img src="resources/img/9.jpg"></a></li>
 		<li><a href="#"><img src="resources/img/10.png"></a></li>
 		<li><a href="#"><img src="resources/img/11.png"></a></li>
