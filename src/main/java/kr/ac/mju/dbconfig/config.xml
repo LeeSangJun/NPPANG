@@ -19,6 +19,10 @@
 
 	<mappers>
 		<mapper resource="kr/ac/mju/mapper/user.xml" />
+<<<<<<< HEAD
 		<mapper resource="kr/ac/mju/mapper/groupManager.xml" />
+=======
+		<mapper resource="kr/ac/mju/mapper/moim.xml" />
+>>>>>>> origin/master
 	</mappers>
 </configuration>
