@@ -19,5 +19,6 @@
 
 	<mappers>
 		<mapper resource="kr/ac/mju/mapper/user.xml" />
+		<mapper resource="kr/ac/mju/mapper/moim.xml" />
 	</mappers>
 </configuration>
