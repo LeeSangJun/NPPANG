@@ -1,12 +1,12 @@
 <%@page import="kr.ac.mju.model.message_plain"%>
 <%@page import="kr.ac.mju.model.moim"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Nppang</title>
 <link rel="stylesheet" type="text/css" href="resources/css/default.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/mypage.css" />
@@ -16,7 +16,7 @@
 <body>
 <header>
 		<nav><a href="logout">LOGOUT</a></nav>
-		<nav><a>${name}´Ô ¾È³çÇÏ¼¼¿ä</a></nav>
+		<nav><a>${name}ë‹˜ ì•ˆë…•í•˜ì„¸ìš”</a></nav>
 		<span>Nppang</span>
 </header>
 <div class="side">
@@ -29,16 +29,16 @@
 		<li><a href="create"><img src="resources/img/new.png"></a></li>
 		<%
 		List<moim> list;
-		if(request.getAttribute("moimlist") != null){ 
+		if(request.getAttribute("moimlist") != null){
 			list = (List<moim>)request.getAttribute("moimlist");
 			for(moim m : list){
 			%>
 			<li><a class="caption" href="bang?moim_id=<%= m.getMoim_id() %>" data-title="<%=m.getMoim_name() %>" data-description="<%=m.getDescription()%>"><img src="resources/img/test01.jpg"></a></li>
-			<%	
+			<%
 			}
 		}
 		%>
-		
+
 	</ul>
 </div>
 

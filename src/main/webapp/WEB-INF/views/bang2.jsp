@@ -1,11 +1,11 @@
 <%@page import="kr.ac.mju.model.message_plain"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Nppang</title>
 	<link rel="stylesheet" type="text/css" href="resources/css/default.css" />
 	<link rel="stylesheet" type="text/css" href="resources/css/mypage.css" />
@@ -14,7 +14,7 @@
 <body>
 <header>
 		<nav><a href="logout">LOGOUT</a></nav>
-		<nav><a>${name}´Ô ¾È³çÇÏ¼¼¿ä</a></nav>
+		<nav><a>${name}ë‹˜ ì•ˆë…•í•˜ì„¸ìš”</a></nav>
 		<span>Nppang</span>
 </header>
 <div class="side">
@@ -24,13 +24,13 @@
 </div>
 <div class="m_function">
 	<ul>
-		<li><a class="caption" href="mlist" data-title="È¸¿øº¸±â" data-description="¿ì¸® µ¿¾Æ¸®ÀÇ È¸¿øµéÀ» È®ÀÎ ÇÒ ¼öÀÖ½À´Ï´Ù."><img src="resources/img/member.png"></a></li>
-		<li><a class="caption" href="account" data-title="ÀåºÎº¸±â" data-description="¿ì¸® µ¿¾Æ¸®ÀÇ ÀåºÎ¸¦ °ü¸®ÇØ ÁÖ¼¼¿ä."><img src="resources/img/moneybag.png"></a></li>
+		<li><a class="caption" href="mlist" data-title="íšŒì›ë³´ê¸°" data-description="ìš°ë¦¬ ë™ì•„ë¦¬ì˜ íšŒì›ë“¤ì„ í™•ì¸ í•  ìˆ˜ìžˆìŠµë‹ˆë‹¤."><img src="resources/img/member.png"></a></li>
+		<li><a class="caption" href="account" data-title="ìž¥ë¶€ë³´ê¸°" data-description="ìš°ë¦¬ ë™ì•„ë¦¬ì˜ ìž¥ë¶€ë¥¼ ê´€ë¦¬í•´ ì£¼ì„¸ìš”."><img src="resources/img/moneybag.png"></a></li>
 	</ul>
 </div>
 <div class ="notice">
 <h1>notice</h1>
-	<p>1¿ù´Þ¿¡ ¿öÅ©¼¥À¸·Î ½ºÅ°ÀåÀ» °¥ ¿¹Á¤ÀÔ´Ï´Ù.</p>
+	<p>1ì›”ë‹¬ì— ì›Œí¬ìƒµìœ¼ë¡œ ìŠ¤í‚¤ìž¥ì„ ê°ˆ ì˜ˆì •ìž…ë‹ˆë‹¤.</p>
 </div>
 </body>
 </html>

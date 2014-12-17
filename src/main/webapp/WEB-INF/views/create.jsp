@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Nppang</title>
 	<link rel="stylesheet" type="text/css" href="resources/css/default.css" />
 	<link rel="stylesheet" type="text/css" href="resources/css/create.css" />
@@ -11,26 +11,26 @@
 <body>
 <header>
 		<nav><a href="logout">LOGOUT</a></nav>
-		<nav><a>${name}╢т ╬хЁГго╪╪©Д</a></nav>
+		<nav><a>${name}К▀≤ Л∙┬К┘∙М∙≤Л└╦Л ■</a></nav>
 		<span>Nppang</span>
 </header>
 <form action = "create" method = "post">
 	<fieldset class="m_image">
-			<p>юл╧лаЖ╦╕ цъ╟║го╪╪©Д.</p>
+			<p>Л²╢К╞╦Л╖─К╔╪ Л╤■Й╟─М∙≤Л└╦Л ■.</p>
 			<input type = "text" name = "photo">
 			<!-- <input type="file" name="photo">-->
 			<!-- <input type="submit" value="Upload"> -->
 		<div>
-			<h2>╣©╬ф╦╝╦М</h2>
-			<input type="text" name = "moim_name" placeholder="╣©╬ф╦╝╦Мю╩ ют╥бго╪╪©Д.">
+			<h2>К▐≥Л∙└К╕╛К╙┘</h2>
+			<input type="text" name = "moim_name" placeholder="К▐≥Л∙└К╕╛К╙┘Л²└ Л·┘К═╔М∙≤Л└╦Л ■.">
 		</div>
 	</fieldset>
 	<fieldset class="m_text">
 	<div>
-		<h2>╣©╬ф╦╝ ╪Ё╦М</h2>
-		<textarea rows="4" cols="50" name = "description" placeholder="╟ё╥╚го╟т ╣©╬ф╦╝╦╕ ╪Ё╦Мгьаж╪╪©Д."></textarea>
-		<h2>д╚ев╟М╦╝</h2>
-		<input type="text" name = "category" placeholder="д╚ев╟М╦╝╦╕ ╪Ёа╓го╪╪©Д.">
+		<h2>К▐≥Л∙└К╕╛ Л└╓К╙┘</h2>
+		<textarea rows="4" cols="50" name = "description" placeholder="Й╟└К·╣М∙≤Й╡▄ К▐≥Л∙└К╕╛К╔╪ Л└╓К╙┘М∙╢Лё╪Л└╦Л ■."></textarea>
+		<h2>Л╧╢М┘▄ЙЁ═К╕╛</h2>
+		<input type="text" name = "category" placeholder="Л╧╢М┘▄ЙЁ═К╕╛К╔╪ Л└╓Л═∙М∙≤Л└╦Л ■.">
 	</div>
 	</fieldset>
 	<button type="submit" value="Submit"> Create </button>
