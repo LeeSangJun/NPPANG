@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.ac.mju.dao.groupManagerDAO">
+<!-- parameterType:마이바티스에게 전달하는 객체 또는 자료형 -->
+
+	<select id = "selectLog" resultType = "kr.ac.mju.model.financial_log">
+		select * from financial_log where moim_id = #{moim_id};
+	</select>
+
+	
+	<insert id = "insertLog" parameterType = "kr.ac.mju.model.financial_log" useGeneratedKeys = "true" keyProperty = "user_id">
+		INSERT INTO financial_log (user_id, moim_id, money, description) VALUES (#{user_id}, #{moim_id}, #{moim_id}, #{description});
+	</insert>
+
+</mapper>

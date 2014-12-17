@@ -62,6 +62,14 @@ public class HomeController {
 	}
 
 
+	@RequestMapping(value = "/create", method = RequestMethod.GET)
+	public ModelAndView moim_create(HttpSession session){
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("create");
+
+		return modelAndView;
+	}
+
 	/*
 	@RequestMapping(value = "/{viewname}", method = RequestMethod.GET)
 	public String layout_router(@PathVariable String viewname) {

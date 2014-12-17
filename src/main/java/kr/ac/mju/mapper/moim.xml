@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.ac.mju.dao.moimDAO">
+<!-- parameterType:마이바티스에게 전달하는 객체 또는 자료형 -->
+
+	<select id = "selectAll" resultType = "kr.ac.mju.model.moim">
+		select * from moim;
+	</select>
+
+	<insert id = "create" parameterType = "kr.ac.mju.model.moim" useGeneratedKeys = "true" keyProperty = "moim_id">
+		INSERT INTO moim (moim_name, category, photo, people, description, leader_id) VALUES (#{moim_name}, #{category}, #{photo}, #{people}, #{description}, #{leader_id});
+	</insert>
+
+	<insert id = "join_moim" parameterType = "kr.ac.mju.model.moim_member">
+		INSERT INTO moim_member (user_id, moim_id, grade, balance) VALUES (#{user_id}, #{moim_id}, #{grade}, #{balance});
+	</insert>
+
+<!--
+    <select id="getUserId" resultType="kr.ac.mju.model.user_info">
+    	select user_id, name from test where nuser_id = #{id}
+    </select>
+
+	<insert id="userInfo_insert" parameterType="kr.ac.mju.model.user_info" useGeneratedKeys="true" keyProperty="user_id">
+        INSERT INTO user_info (name, email, password, description, photo) VALUES (#{name}, #{email}, #{password}, #{description}, #{photo});
+    </insert>
+
+	<select id="userInfo_select" parameterType="kr.ac.mju.model.user_info" >
+        SELECT * from user_info where email = '1@1.1';
+    </select>
+
+    <select id = "loginCheck" parameterType = "kr.ac.mju.model.user_info" resultType = "kr.ac.mju.model.user_info">
+    	SELECT * from user_info where email = #{email} and pwd = #{password};
+    </select>
+     -->
+</mapper>
