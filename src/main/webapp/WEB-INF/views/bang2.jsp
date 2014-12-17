@@ -25,8 +25,8 @@
 </div>
 <div class="m_function">
 	<ul>
-		<li><a class="caption" href="#" data-title="회원보기" data-description="우리 동아리의 회원들을 확인 할 수있습니다."><img src="resources/img/member.png"></a></li>
-		<li><a class="caption" href="#" data-title="장부보기" data-description="우리 동아리의 장부를 관리해 주세요."><img src="resources/img/moneybag.png"></a></li>
+		<li><a class="caption" href="mlist" data-title="회원보기" data-description="우리 동아리의 회원들을 확인 할 수있습니다."><img src="resources/img/member.png"></a></li>
+		<li><a class="caption" href="account" data-title="장부보기" data-description="우리 동아리의 장부를 관리해 주세요."><img src="resources/img/moneybag.png"></a></li>
 	</ul>
 </div>
 <div class ="notice">

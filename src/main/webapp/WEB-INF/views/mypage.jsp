@@ -7,6 +7,7 @@
 <title>Nppang</title>
 <link rel="stylesheet" type="text/css" href="resources/css/default.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/mypage.css" />
+<link rel="stylesheet" type="text/css" href="resources/css/bang.css" />
 <script src="resources/js/modernizr.custom.js"></script>
 </head>
 <body>
@@ -26,17 +27,10 @@
 <div class="my_bang">
 	<ul class="grid effect" id="grid">
 		<li><a href="create"><img src="resources/img/new.png"></a></li>
-		<li><a href="#"><img src="resources/img/9.jpg"></a></li>
-		<li><a href="#"><img src="resources/img/10.png"></a></li>
-		<li><a href="#"><img src="resources/img/11.png"></a></li>
-		<li><a href="#"><img src="resources/img/12.png"></a></li>
-		<li><a href="#"><img src="resources/img/8.jpg"></a></li>
-		<li><a href="#"><img src="resources/img/9.jpg"></a></li>
-		<li><a href="#"><img src="resources/img/10.png"></a></li>
-		<li><a href="#"><img src="resources/img/11.png"></a></li>
-		<li><a href="#"><img src="resources/img/12.png"></a></li>
-		<li><a href="#"><img src="resources/img/8.jpg"></a></li>
-		<li><a href="#"><img src="resources/img/9.jpg"></a></li>
+		<li><a class="caption" href="bang1" data-title="코딩 동아리" data-description="자기가 원하는 웹서비스를 개발하자!"><img src="resources/img/test01.jpg"></a></li>
+		<li><a class="caption" href="bang2" data-title="농구 동아리" data-description="농구하면서 친목을 쌓아요!"><img src="resources/img/test02.jpg"></a></li>
+		<li><a class="caption" href="bang3" data-title="먹방 동아리" data-description="맛집을 탐방합시다!! "><img src="resources/img/test03.jpg"></a></li>
+		<li><a class="caption" href="bang1" data-title="여행 동아리" data-description="여행가자 눈누난나~"><img src="resources/img/test04.jpg"></a></li>
 	</ul>
 </div>
 
