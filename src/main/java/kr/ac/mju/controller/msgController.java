@@ -28,7 +28,7 @@ public class msgController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	
+
 
 	@RequestMapping(value = "/getplainmsg", method = RequestMethod.GET)
 	public ModelAndView getplainmsg(

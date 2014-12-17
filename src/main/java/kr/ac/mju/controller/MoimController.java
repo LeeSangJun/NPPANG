@@ -1,11 +1,14 @@
 package kr.ac.mju.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import kr.ac.mju.dao.moimDAO;
 import kr.ac.mju.dbconfig.MyBatisConnectionFactory;
 import kr.ac.mju.model.moim;
 import kr.ac.mju.model.moim_member;
+import kr.ac.mju.model.user_info;
 
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
@@ -69,7 +72,36 @@ public class MoimController {
 		view.setViewName("redirect:dashboard");
 		return view;
 	}
-
+//	@RequestMapping(value = "/mymoim", method = RequestMethod.POST)
+//	public ModelAndView myMoim(
+//			HttpSession session
+//			){
+//
+//		/********중복코드*********/
+//		SqlSession sqlSession = MyBatisConnectionFactory.getInstance().openSession(true);	//mybatis 세션 연결
+//		moimDAO moimDAO = sqlSession.getMapper(moimDAO.class);	//Mapper연결
+//		/***************************/
+//		System.out.println("create_moim");
+//		ModelAndView view = new ModelAndView();
+//
+//		moim moim = new moim();
+//		user_info user = new user_info();
+//		System.out.println(session.getAttribute("user_id"));
+//		int user_id = (Integer)session.getAttribute("user_id");
+//		user.setId(user_id);
+//		
+//		List<moim> list = moimDAO.myMoim(user);
+//		
+//		if(list.isEmpty()){
+//			
+//		}
+//
+//		moimDAO.join_moim(moim_member);
+//
+//
+//		view.setViewName("redirect:dashboard");
+//		return view;
+//	}
 
 /*
 

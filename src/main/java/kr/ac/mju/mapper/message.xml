@@ -5,7 +5,7 @@
 <!-- parameterType:마이바티스에게 전달하는 객체 또는 자료형 -->
 
 	<select id = "selectPlainMsg" resultType = "kr.ac.mju.model.message_plain">
-		select * from message_plain where to_user = #{to_user};
+		select * from message_plain where to_user = #{to_user} order by date desc;
 	</select>
 
 	

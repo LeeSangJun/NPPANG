@@ -16,6 +16,12 @@
 		INSERT INTO moim_member (user_id, moim_id, grade, balance) VALUES (#{user_id}, #{moim_id}, #{grade}, #{balance});
 	</insert>
 
+	<select id = "myMoim" resultType = "kr.ac.mju.model.moim_member">
+		select * from moim_member where user_id = #{user_id};
+	</select>
+		<select id = "selectMoim" resultType = "kr.ac.mju.model.moim">
+		select * from moim where moim_id = #{moim_id};
+	</select>
 <!--
     <select id="getUserId" resultType="kr.ac.mju.model.user_info">
     	select user_id, name from test where nuser_id = #{id}
