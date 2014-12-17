@@ -47,7 +47,8 @@ public class MoimController {
 		moim moim = new moim();
 		System.out.println(session.getAttribute("user_id"));
 		int leader_id = (Integer)session.getAttribute("user_id");
-
+		
+		
 		moim.setMoim_name(moim_name);
 		moim.setCategory(category);
 		moim.setPhoto(photo);

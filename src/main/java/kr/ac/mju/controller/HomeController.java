@@ -33,19 +33,28 @@ public class HomeController {
 	 */
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ModelAndView home(Locale locale, Model model) {
+	public ModelAndView home(Locale locale, Model model, HttpSession session) {
 		logger.info("Welcome home! The client locale is {}.", locale);
-		ModelAndView DBview = new ModelAndView();
-		DBview.setViewName("index");
-		return DBview;
+		ModelAndView modelAndView = new ModelAndView();
+		
+		if(session.getAttribute("name") != null){
+			modelAndView.setViewName("redirect:dashboard");
+		}else{
+			modelAndView.setViewName("index");
+		}
+		return modelAndView;
 	}
 
 	@RequestMapping(value = "/dashboard", method = RequestMethod.GET)
-	public ModelAndView dashboard(){
-			ModelAndView view = new ModelAndView();
+	public ModelAndView dashboard(HttpSession session){
+			ModelAndView modelAndView = new ModelAndView();
 			System.out.println("dashboard");
-			view.setViewName("mypage");
-			return view;
+			if(session.getAttribute("name") == null){
+				modelAndView.setViewName("redirect:/");
+			}else{
+				modelAndView.setViewName("mypage");
+			}
+			return modelAndView;
 	}
 
 
