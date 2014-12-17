@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+.m_function ul{
+	outline: none;
+	border: none;
+	text-decoration: none;
+	text-align: -webkit-center;
+	margin: 80px auto;
+}
+.m_function ul a{
+	text-decoration: none;
+}
+.m_function ul li{
+	display: inline;
+	text-align: -webkit-auto;
+	margin: 50px 30px;
+	text-align: 
+}
+.m_function ul li img{
+	width: 180px;
+}
+.caption {
+	display: inline-block;
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    background: #fff;
+    transition: background 0.3s ease-in-out;
+}
+.caption:hover{
+	background: rgba(0,0,0,0);
+}
+.caption img{
+	display: block;
+	max-width: 100%;
+	transition: transform 0.3s ease-in-out;
+}
+.caption:hover img{
+	opacity: translateX(100%);
+}
+.caption::before,
+.caption::after{
+	position: absolute;
+    width: 100%;
+    background: #2cba7c;
+    transform: translate(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+.caption::before {
+    content: attr(data-title);
+    height: 100%;
+    color: #fff;
+    font-family: 'Hanna', serif;
+    font-size: 30px;
+    font-weight: 300;
+	text-align: center;
+    padding: 30px;
+}
+ 
+.caption::after {
+    content: '\201C' attr(data-description) '\201D';
+    top: 40%;
+    height: 60%;
+    font-family: 'Jejugothic', serif;
+    color: #fff;
+    font-size: 14px;
+    padding: 20px 30px;
+}
+.caption:hover::before,
+.caption:hover::after  {
+    transform: translateX(0%);
+}
+.notice{
+	width: 73%;
+	float: right;
+}
+.notice h1{
+	font-family: 'Hanna',serif;
+	color:#2cba7c;
+	width: 90%;
+	font-size: 30px;
+	padding: 0px 30px 15px 0px;
+	border-bottom: 2px solid rgba(0,0,0,0.4);
+}
