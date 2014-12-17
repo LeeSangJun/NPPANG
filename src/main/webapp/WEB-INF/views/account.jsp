@@ -1,11 +1,11 @@
 <%@page import="kr.ac.mju.model.financial_log"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Nppang</title>
 <link rel="stylesheet" type="text/css" href="resources/css/default.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/mypage.css" />
@@ -14,7 +14,7 @@
 <body>
 <header>
 		<nav><a href="logout">LOGOUT</a></nav>
-		<nav><a>${name}´Ô ¾È³çÇÏ¼¼¿ä</a></nav>
+		<nav><a>${name}ë‹˜ ì•ˆë…•í•˜ì„¸ìš”</a></nav>
 		<span>Nppang</span>
 </header>
 <div class="side">
@@ -29,11 +29,11 @@
 				<th colspan="5"><h1><span>Account Book</span></h1></th>
 			</tr>
 			<tr>
-				<td>³¯Â¥</td>
-				<td>³»¿ë</td>
-				<td>¼öÀÔ</td>
-				<td>ÁöÃâ</td>
-				<td>ÀÜ¾×</td>
+				<td>ë‚ ì§œ</td>
+				<td>ë‚´ìš©</td>
+				<td>ìˆ˜ì…</td>
+				<td>ì§€ì¶œ</td>
+				<td>ì”ì•¡</td>
 			</tr>
 			<%
 				if(request.getAttribute("fin_log") != null){
@@ -44,48 +44,48 @@
 							<td><a><%=f.getDate() %></a></td>
 							<td><a><%= f.getDescription() %></a></td>
 							<% if(f.getMoney() >= 0){ %>
-								<td><a><%= f.getMoney() %>¿ø</a></td>
-								<td><a>0¿ø</a></td>
+								<td><a><%= f.getMoney() %>ì›</a></td>
+								<td><a>0ì›</a></td>
 							<%}else{ %>
-								<td><a>0¿ø</a></td>
-								<td><a><%= f.getMoney() %>¿ø</a></td>
-							
+								<td><a>0ì›</a></td>
+								<td><a><%= f.getMoney() %>ì›</a></td>
+
 							<%} %>
-							<td><a>500,000¿ø</a></td>
+							<td><a>500,000ì›</a></td>
 						</tr>
 						<%
 					}
 				}
 			%>
 			<tr>
-				<td><a>12¿ù 12ÀÏ</a></td>
-				<td><a>baytreeÁ¤¸ğ - ÅäÁî</a></td>
-				<td><a>0¿ø</a></td>
-				<td><a>40,000¿ø</a></td>
-				<td><a>460,000¿ø</a></td>
+				<td><a>12ì›” 12ì¼</a></td>
+				<td><a>baytreeì •ëª¨ - í† ì¦ˆ</a></td>
+				<td><a>0ì›</a></td>
+				<td><a>40,000ì›</a></td>
+				<td><a>460,000ì›</a></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><a>baytreeÈ¸½Ä - ¼³·¹ÀÓ</a></td>
-				<td><a>0¿ø</a></td>
-				<td><a>120,000¿ø</a></td>
-				<td><a>340,000¿ø</a></td>
+				<td><a>baytreeíšŒì‹ - ì„¤ë ˆì„</a></td>
+				<td><a>0ì›</a></td>
+				<td><a>120,000ì›</a></td>
+				<td><a>340,000ì›</a></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><a>baytreeÈÄ½Ä</a></td>
-				<td><a>0¿ø</a></td>
-				<td><a>73,000¿ø</a></td>
-				<td><a>267,000¿ø</a></td>
+				<td><a>baytreeí›„ì‹</a></td>
+				<td><a>0ì›</a></td>
+				<td><a>73,000ì›</a></td>
+				<td><a>267,000ì›</a></td>
 			</tr>
 		</table>
-		ÀÔÃâ±İ ³»¿ª Ãß°¡
+		ì…ì¶œê¸ˆ ë‚´ì—­ ì¶”ê°€
 		<% if((Integer)(session.getAttribute("grade")) < 3){ %>
 			<form action="insertlog" method="post">
-				user_id :<input type="text" id="id" name="id"> 
-				money : <input type="text" id="money" name="money"> 
-				desc : <input type="text" id="desc" name="desc"> 
-				<input type="submit" value="Àü¼Û">
+				user_id :<input type="text" id="id" name="id">
+				money : <input type="text" id="money" name="money">
+				desc : <input type="text" id="desc" name="desc">
+				<input type="submit" value="ì „ì†¡">
 			</form>
 		<%} %>
 	</div>

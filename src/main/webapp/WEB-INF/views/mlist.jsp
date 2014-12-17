@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Nppang</title>
 <link rel="stylesheet" type="text/css" href="resources/css/default.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/mypage.css" />
@@ -14,7 +14,7 @@
 <body>
 <header>
 		<nav><a href="logout">LOGOUT</a></nav>
-		<nav><a>${name}´Ô ¾È³çÇÏ¼¼¿ä</a></nav>
+		<nav><a>${name}ë‹˜ ì•ˆë…•í•˜ì„¸ìš”</a></nav>
 		<span>Nppang</span>
 </header>
 	<div class="side">
@@ -29,20 +29,20 @@
 	</div>
 	<div class="list">
 		<div class="m_name">
-			<h2>ÀÌ¸§</h2>
-			<a>ÀÌÀ¯°æ</a>
+			<h2>ì´ë¦„</h2>
+			<a>ì´ìœ ê²½</a>
 		</div>
 		<div class="m_mail">
-			<h2>¸ÞÀÏ</h2>
+			<h2>ë©”ì¼</h2>
 			<a>leeyu823@gmail.com</a>
 		</div>
 		<div class="m_message">
-			<h2>ÀÚ±â¼Ò°³</h2>
-			<a>ÇÑÇÐ±â µ¿¾È ¿­½ÉÈ÷ ÇÏ°Ú½À´Ï´Ù.</a>
+			<h2>ìžê¸°ì†Œê°œ</h2>
+			<a>í•œí•™ê¸° ë™ì•ˆ ì—´ì‹¬ížˆ í•˜ê² ìŠµë‹ˆë‹¤.</a>
 		</div>
 		<div class="m_grade">
-			<h2>È¸¿øµî±Þ</h2>
-			<a>ÀÏ¹ÝÈ¸¿ø</a>
+			<h2>íšŒì›ë“±ê¸‰</h2>
+			<a>ì¼ë°˜íšŒì›</a>
 		</div>
 	</div>
 
