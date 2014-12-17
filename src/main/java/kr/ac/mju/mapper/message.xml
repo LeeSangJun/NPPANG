@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.ac.mju.dao.messageDAO">
+<!-- parameterType:마이바티스에게 전달하는 객체 또는 자료형 -->
+
+	<select id = "selectPlainMsg" resultType = "kr.ac.mju.model.message_plain">
+		select * from message_plain where to_user = #{to_user};
+	</select>
+
+	
+	<insert id = "sendPlainMsg" parameterType = "kr.ac.mju.model.message_plain" useGeneratedKeys = "true" keyProperty = "to_user">
+		INSERT INTO message_plain (to_user, from_user, contents) VALUES (#{to_user}, #{from_user}, #{contents});
+	</insert>
+
+</mapper>

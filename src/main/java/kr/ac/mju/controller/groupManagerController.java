@@ -56,6 +56,7 @@ public class groupManagerController {
 		int moim_id_int = Integer.parseInt(moim_id);
 		moim.setMoim_id(moim_id_int);
 		
+		//user_id를 세션에서 받아와야 함!!
 		int user_id = 0 ;
 		System.out.println(user_id +", "+moim_id);
 //		if(session.getAttribute("user_id") == null){
@@ -101,6 +102,9 @@ public class groupManagerController {
 		fin_log.setUser_id(Integer.parseInt(id));
 		fin_log.setMoney(Integer.parseInt(money));
 		fin_log.setDescription(description);
+		
+		//moim_id를 어디선가 받아와야 함....
+		//세션이 적당할까??
 		fin_log.setMoim_id(2);
 		int result = 0;
 		if((result = groupManager.insertLog(fin_log)) == 1){
