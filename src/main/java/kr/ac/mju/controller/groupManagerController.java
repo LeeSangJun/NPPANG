@@ -6,9 +6,12 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import kr.ac.mju.dao.groupManagerDAO;
+import kr.ac.mju.dao.messageDAO;
 import kr.ac.mju.dbconfig.MyBatisConnectionFactory;
 import kr.ac.mju.model.financial_log;
+import kr.ac.mju.model.message_plain;
 import kr.ac.mju.model.moim;
+import kr.ac.mju.model.moim_member;
 
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
@@ -113,6 +116,70 @@ public class groupManagerController {
 			System.out.println("fail");
 		}
 		modelAndView.setViewName("test_log");
+		
+		return modelAndView;
+	}
+	
+	public List<message_plain> getmsg(int to_user
+			){
+		/********중복코드**********/
+		SqlSession sqlSession = MyBatisConnectionFactory.getInstance().openSession(true);	//mybatis 세션 연결
+		messageDAO message = sqlSession.getMapper(messageDAO.class);
+		/***************************/
+
+		//insert Database
+		message_plain msg = new message_plain();
+
+		msg.setTo_user(to_user);
+		List<message_plain> list = message.selectPlainMsg(msg);
+
+		System.out.println(list);
+		if(!list.isEmpty()){
+			System.out.println("log_complete");
+		}else{
+			System.out.println("msg_load_failed");
+		}
+		
+
+		return list;
+	}
+	
+	@RequestMapping(value = "/bang", method = RequestMethod.GET)
+	public ModelAndView bang(
+			HttpSession session,
+			@RequestParam(value="moim_id", required=true) String moim_id
+			){
+		/********중복코드**********/
+		SqlSession sqlSession = MyBatisConnectionFactory.getInstance().openSession(true);	//mybatis 세션 연결
+		groupManagerDAO groupManager = sqlSession.getMapper(groupManagerDAO.class);
+		/***************************/
+
+		ModelAndView modelAndView = new ModelAndView();
+		moim moim = new moim();
+		moim_member moim_member = new moim_member();
+		
+		int user_id = (Integer) session.getAttribute("user_id");
+		
+		moim_member.setMoim_id(Integer.parseInt(moim_id));
+		moim_member.setUser_id(user_id);
+		
+		
+		moim_member result = groupManager.getGrade(moim_member);
+		System.out.println(result.getGrade());
+		if(result.getGrade() == 1){
+			session.setAttribute("moim", moim_id);
+			modelAndView.setViewName("bang1");
+		}else if(result.getGrade() == 2){
+			session.setAttribute("moim", moim_id);
+			modelAndView.setViewName("bang2");
+		}else{
+			session.setAttribute("moim", moim_id);
+			modelAndView.setViewName("bang3");
+		}
+		List<message_plain> msglist = getmsg(user_id);
+		if(!msglist.isEmpty()){
+			modelAndView.addObject("msglist", msglist);
+		}
 		
 		return modelAndView;
 	}

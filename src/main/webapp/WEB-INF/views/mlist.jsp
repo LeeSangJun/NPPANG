@@ -19,10 +19,7 @@
 </header>
 	<div class="side">
 		<nav class="menu">
-			<h3>Message</h3>
-			<a href="#">new test01</a>
-			<a href="#">new test02</a>
-			<a href="#">new test03</a>
+			<jsp:include page="msg.jsp" >
 		</nav>
 	</div>
 	<div id="toggle-search">

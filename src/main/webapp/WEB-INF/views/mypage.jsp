@@ -21,17 +21,7 @@
 </header>
 <div class="side">
 	<nav class="menu">
-		<h3>Message</h3>
-		<% 	List<message_plain> msglist;
-			if((msglist = (List<message_plain>)request.getAttribute("msglist")) != null){ 
-				for(message_plain msg : msglist){
-					%>
-						<a href="#"><%=msg.getContents() %></a>
-					
-					<%
-				}
-			}
-		%>
+		<jsp:include page="msg.jsp" />
 	</nav>
 </div>
 <div class="my_bang">
@@ -43,7 +33,7 @@
 			list = (List<moim>)request.getAttribute("moimlist");
 			for(moim m : list){
 			%>
-			<li><a class="caption" href="bang?moim_id<%= m.getMoim_id() %>" data-title="<%=m.getMoim_name() %>" data-description="<%=m.getDescription()%>"><img src="resources/img/test01.jpg"></a></li>
+			<li><a class="caption" href="bang?moim_id=<%= m.getMoim_id() %>" data-title="<%=m.getMoim_name() %>" data-description="<%=m.getDescription()%>"><img src="resources/img/test01.jpg"></a></li>
 			<%	
 			}
 		}

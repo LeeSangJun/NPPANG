@@ -78,10 +78,11 @@ public class HomeController {
 		moimDAO moimDAO = sqlSession.getMapper(moimDAO.class);	//Mapper연결
 		/***************************/
 		System.out.println("create_moim");
-
+		session.removeAttribute("moim");
+		
 		moim moim = new moim();
 		moim_member moim_member = new moim_member();
-
+		
 		ModelAndView modelAndView = new ModelAndView();
 		System.out.println("dashboard");
 		if(session.getAttribute("name") == null){
