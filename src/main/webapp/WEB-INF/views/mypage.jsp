@@ -43,7 +43,7 @@
 			list = (List<moim>)request.getAttribute("moimlist");
 			for(moim m : list){
 			%>
-			<li><a class="caption" href="bang1?moim_id<%= m.getMoim_id() %>" data-title="<%=m.getMoim_name() %>" data-description="<%=m.getDescription()%>"><img src="resources/img/test01.jpg"></a></li>
+			<li><a class="caption" href="bang?moim_id<%= m.getMoim_id() %>" data-title="<%=m.getMoim_name() %>" data-description="<%=m.getDescription()%>"><img src="resources/img/test01.jpg"></a></li>
 			<%	
 			}
 		}
