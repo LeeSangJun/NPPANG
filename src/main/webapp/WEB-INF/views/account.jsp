@@ -1,3 +1,5 @@
+<%@page import="kr.ac.mju.model.financial_log"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -17,10 +19,7 @@
 </header>
 <div class="side">
 	<nav class="menu">
-		<h3>Message</h3>
-		<a href="#">new test01</a>
-		<a href="#">new test02</a>
-		<a href="#">new test03</a>
+		<jsp:include page="msg.jsp" />
 	</nav>
 </div>
 <div class="m_container">
@@ -36,13 +35,28 @@
 				<td>지출</td>
 				<td>잔액</td>
 			</tr>
-			<tr>
-				<td><a>11월 01일</a></td>
-				<td><a>명지대 창업동아리 지원금</a></td>
-				<td><a>500,000원</a></td>
-				<td><a>0원</a></td>
-				<td><a>500,000원</a></td>
-			</tr>
+			<%
+				if(request.getAttribute("fin_log") != null){
+					List<financial_log> flist = (List<financial_log>)request.getAttribute("fin_log");
+					for(financial_log f : flist){
+						%>
+						<tr>
+							<td><a><%=f.getDate() %></a></td>
+							<td><a><%= f.getDescription() %></a></td>
+							<% if(f.getMoney() >= 0){ %>
+								<td><a><%= f.getMoney() %>원</a></td>
+								<td><a>0원</a></td>
+							<%}else{ %>
+								<td><a>0원</a></td>
+								<td><a><%= f.getMoney() %>원</a></td>
+							
+							<%} %>
+							<td><a>500,000원</a></td>
+						</tr>
+						<%
+					}
+				}
+			%>
 			<tr>
 				<td><a>12월 12일</a></td>
 				<td><a>baytree정모 - 토즈</a></td>
@@ -65,6 +79,15 @@
 				<td><a>267,000원</a></td>
 			</tr>
 		</table>
+		입출금 내역 추가
+		<% if((Integer)(session.getAttribute("grade")) < 3){ %>
+			<form action="insertlog" method="post">
+				user_id :<input type="text" id="id" name="id"> 
+				money : <input type="text" id="money" name="money"> 
+				desc : <input type="text" id="desc" name="desc"> 
+				<input type="submit" value="전송">
+			</form>
+		<%} %>
 	</div>
 </div>
 </div>

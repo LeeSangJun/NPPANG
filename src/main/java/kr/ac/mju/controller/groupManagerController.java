@@ -38,11 +38,36 @@ public class groupManagerController {
 		//moim_member 가 생성되어야 함..
 		return true;
 	}
-
-	@RequestMapping(value = "/getlog", method = RequestMethod.GET)
-	public ModelAndView getLog(
-			HttpSession session,
-			@RequestParam(value="moim_id", required=true) String moim_id
+//	@RequestMapping(value = "/account", method = RequestMethod.GET)
+//	public ModelAndView account(
+//			HttpSession session
+//			){
+//		/********중복코드**********/
+//		SqlSession sqlSession = MyBatisConnectionFactory.getInstance().openSession(true);	//mybatis 세션 연결
+//		groupManagerDAO groupManager = sqlSession.getMapper(groupManagerDAO.class);
+//		/***************************/
+//
+//		ModelAndView modelAndView = new ModelAndView();
+//		moim moim = new moim();
+//		moim_member moim_member = new moim_member();
+//		
+//		int user_id = (Integer) session.getAttribute("user_id");
+//
+//		int moim_id = (Integer) session.getAttribute("moim");
+//
+//		moim_member result = groupManager.getGrade(moim_member);
+//		System.out.println(result.getGrade());
+//
+//		List<message_plain> msglist = getmsg(user_id);
+//		if(!msglist.isEmpty()){
+//			modelAndView.addObject("msglist", msglist);
+//		}
+//		
+//		return modelAndView;
+//	}
+	@RequestMapping(value = "/account", method = RequestMethod.GET)
+	public ModelAndView account(
+			HttpSession session
 			){
 		/********중복코드**********/
 		SqlSession sqlSession = MyBatisConnectionFactory.getInstance().openSession(true);	//mybatis 세션 연결
@@ -50,40 +75,36 @@ public class groupManagerController {
 		/***************************/
 
 		ModelAndView modelAndView = new ModelAndView();
+		if(session.getAttribute("grade") == null){
+			modelAndView.setViewName("redirect:/");
+			
+		}else{
+			int user_id = (Integer) session.getAttribute("user_id");
+			int moim_id = (Integer) session.getAttribute("moim");
+			
+			//insert Database
+			moim moim = new moim();
+			List<financial_log> fin_list = new ArrayList<financial_log>();
+			
+			financial_log fin_log = new financial_log();
+			moim.setMoim_id(moim_id);
+			
+			//user_id를 세션에서 받아와야 함!!
+			System.out.println(user_id +", "+moim_id);
 
-		//insert Database
-		moim moim = new moim();
-		List<financial_log> fin_list = new ArrayList<financial_log>();
-		
-		financial_log fin_log = new financial_log();
-		int moim_id_int = Integer.parseInt(moim_id);
-		moim.setMoim_id(moim_id_int);
-		
-		//user_id를 세션에서 받아와야 함!!
-		int user_id = 0 ;
-		System.out.println(user_id +", "+moim_id);
-//		if(session.getAttribute("user_id") == null){
-//			modelAndView.addObject("fin_log", "123123");
-//			modelAndView.setViewName("test_log");
-//
-//		}else{
-//			user_id = (Integer) session.getAttribute("user_id");
-			if(checkJoin(user_id, moim_id_int)){		//login 여부 checking
+			fin_list = groupManager.selectLog(moim);
+			if(fin_list != null){		//id - pwd 일치여부 확인
 				System.out.println(fin_list);
-				if(!(fin_list = groupManager.selectLog(moim)).isEmpty()){		//id - pwd 일치여부 확인
-					System.out.println("log_complete");
-					System.out.println(fin_list);
-					modelAndView.addObject("fin_log", fin_list);
-					modelAndView.addObject("error", "모임을 찾음..");
-					modelAndView.setViewName("test_log");
-				}else{
-					System.out.println("log_failed");
-					modelAndView.addObject("error", "해당 모임을 찾을 수 없읍니다.");
-					modelAndView.setViewName("index");
-				}
+				System.out.println("log_complete");
+				modelAndView.addObject("fin_log", fin_list);
+				modelAndView.addObject("error", "모임을 찾음..");
+				modelAndView.setViewName("account");
+			}else{
+				System.out.println("log_failed");
+				modelAndView.addObject("error", "해당 모임을 찾을 수 없읍니다.");
+				modelAndView.setViewName("redirect:/");
 			}
-//		}
-		modelAndView.setViewName("test_log");
+		}
 		return modelAndView;
 	}
 	@RequestMapping(value = "/insertlog", method = RequestMethod.POST)
@@ -97,7 +118,8 @@ public class groupManagerController {
 		SqlSession sqlSession = MyBatisConnectionFactory.getInstance().openSession(true);	//mybatis 세션 연결
 		groupManagerDAO groupManager = sqlSession.getMapper(groupManagerDAO.class);
 		/***************************/
-
+		
+		
 		ModelAndView modelAndView = new ModelAndView();
 		moim moim = new moim();
 		financial_log fin_log = new financial_log();
@@ -108,14 +130,15 @@ public class groupManagerController {
 		
 		//moim_id를 어디선가 받아와야 함....
 		//세션이 적당할까??
-		fin_log.setMoim_id(2);
+		int moimId = (Integer) session.getAttribute("moim");
+		fin_log.setMoim_id(moimId);
 		int result = 0;
 		if((result = groupManager.insertLog(fin_log)) == 1){
 			System.out.println("success");
 		}else{
 			System.out.println("fail");
 		}
-		modelAndView.setViewName("test_log");
+		modelAndView.setViewName("redirect:account");
 		
 		return modelAndView;
 	}
@@ -167,13 +190,16 @@ public class groupManagerController {
 		moim_member result = groupManager.getGrade(moim_member);
 		System.out.println(result.getGrade());
 		if(result.getGrade() == 1){
-			session.setAttribute("moim", moim_id);
+			session.setAttribute("moim", Integer.parseInt(moim_id));
+			session.setAttribute("grade", result.getGrade());
 			modelAndView.setViewName("bang1");
 		}else if(result.getGrade() == 2){
-			session.setAttribute("moim", moim_id);
+			session.setAttribute("moim", Integer.parseInt(moim_id));
+			session.setAttribute("grade", result.getGrade());
 			modelAndView.setViewName("bang2");
-		}else{
-			session.setAttribute("moim", moim_id);
+		}else{ 
+			session.setAttribute("moim", Integer.parseInt(moim_id));
+			session.setAttribute("grade", result.getGrade());
 			modelAndView.setViewName("bang3");
 		}
 		List<message_plain> msglist = getmsg(user_id);
@@ -182,5 +208,7 @@ public class groupManagerController {
 		}
 		
 		return modelAndView;
-	}
+	}	
+	
+
 }

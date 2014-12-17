@@ -19,17 +19,7 @@
 </header>
 <div class="side">
 	<nav class="menu">
-		<h3>Message</h3>
-		<% 	List<message_plain> msglist;
-			if((msglist = (List<message_plain>)request.getAttribute("msglist")) != null){ 
-				for(message_plain msg : msglist){
-					%>
-						<a href="#"><%=msg.getContents() %></a>
-					
-					<%
-				}
-			}
-		%>
+		<jsp:include page="msg.jsp" />
 	</nav>
 </div>
 <div class="m_function">

@@ -79,6 +79,7 @@ public class HomeController {
 		/***************************/
 		System.out.println("create_moim");
 		session.removeAttribute("moim");
+		session.removeAttribute("grade");
 		
 		moim moim = new moim();
 		moim_member moim_member = new moim_member();
