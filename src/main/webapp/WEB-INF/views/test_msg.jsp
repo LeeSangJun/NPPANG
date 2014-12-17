@@ -10,9 +10,10 @@
 </head>
 <body>
 
-<form action="sendplain" method="post">
+<form action="sendchargeall" method="post">
 to : <input type="text" id="to_user" name="to_user">
 message : <input type="text" id="contents" name="contents">
+billing : <input type="text" id="billing_price" name="billing_price">
 <input type="submit" value="Àü¼Û">
 </form>
 <%= request.getAttribute("error") %>

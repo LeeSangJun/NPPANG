@@ -12,4 +12,5 @@ public interface moimDAO {
 	public void join_moim(moim_member moim_member);
 	public List<moim_member> myMoim(moim_member moim_member);
 	public moim selectMoim(moim_member moim_member);
+	public List<moim_member> moimMembers(moim_member moim_member);
 }

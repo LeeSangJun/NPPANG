@@ -19,8 +19,11 @@
 	<select id = "myMoim" resultType = "kr.ac.mju.model.moim_member">
 		select * from moim_member where user_id = #{user_id};
 	</select>
-		<select id = "selectMoim" resultType = "kr.ac.mju.model.moim">
+	<select id = "selectMoim" resultType = "kr.ac.mju.model.moim">
 		select * from moim where moim_id = #{moim_id};
+	</select>
+	<select id = "moimMembers" resultType = "kr.ac.mju.model.moim_member">
+		select * from moim_member where moim_id = #{moim_id};
 	</select>
 <!--
     <select id="getUserId" resultType="kr.ac.mju.model.user_info">

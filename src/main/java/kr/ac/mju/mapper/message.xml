@@ -12,5 +12,13 @@
 	<insert id = "sendPlainMsg" parameterType = "kr.ac.mju.model.message_plain" useGeneratedKeys = "true" keyProperty = "to_user">
 		INSERT INTO message_plain (to_user, from_user, contents) VALUES (#{to_user}, #{from_user}, #{contents});
 	</insert>
+	
+	<select id = "selectChargeMsg" resultType = "kr.ac.mju.model.message_charge">
+		select * from message_charge where to_user = #{to_user} order by date desc;
+	</select>
 
+	
+	<insert id = "sendChargeMsg" parameterType = "kr.ac.mju.model.message_charge" useGeneratedKeys = "true" keyProperty = "to_user">
+		INSERT INTO message_charge (to_user, from_user, contents, billing_price, balance, moim_id) VALUES (#{to_user}, #{from_user}, #{contents}, #{billing_price}, #{balance}, #{moim_id});
+	</insert>
 </mapper>

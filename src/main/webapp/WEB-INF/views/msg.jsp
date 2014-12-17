@@ -19,6 +19,40 @@
 					<%
 				}
 			}
+			
 		%>
+		
+		<% if(session.getAttribute("grade") != null){
+			if((Integer)session.getAttribute("grade") < 3){ %>
+		
+		전체 메시지 고지서
+			<form action='sendchargeall' method='post'>
+				to : <input type='text' id='to_user' name='to_user'><br/>
+				message : <input type='text' id='contents' name='contents'><br/>
+				billing : <input type='text' id='billing_price' name='billing_price'><br/>
+				<input type='submit' value='전송'>
+			</form>
+		전체 메시지 일반
+			<form action='sendall' method='post'><br/>
+				to : <input type='text' id='to_user' name='to_user'><br/>
+				message : <input type='text' id='contents' name='contents'><br/>
+				<input type='submit' value='전송'>
+			</form>
+			
+		고지서 메시지
+			<form action='sendcharge' method='post'><br/>
+				to : <input type='text' id='to_user' name='to_user'><br/>
+				message : <input type='text' id='contents' name='contents'><br/>
+				billing : <input type='text' id='billing_price' name='billing_price'><br/>
+				<input type='submit' value='전송'>
+			</form>
+		일반 메시지
+			<form action='sendplain' method='post'><br/>
+				to : <input type='text' id='to_user' name='to_user'><br/>
+				message : <input type='text' id='contents' name='contents'><br/>
+				<input type='submit' value='전송'>
+			</form>
+		<%} 
+		}%>
 </body>
 </html>

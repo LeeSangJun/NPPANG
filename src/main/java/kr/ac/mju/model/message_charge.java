@@ -8,6 +8,10 @@ public class message_charge {
 	private int billing_price;
 	private int balance;
 	private String date;
+	private int moim_id;
+	
+	public int getMoim_id() {	return moim_id;	}
+	public void setMoim_id(int moim_id) {	this.moim_id = moim_id;	}
 	
 	public int getMsg_num() {	return msg_num;	}
 	public void setMsg_num(int msg_num) {	this.msg_num = msg_num;	}
