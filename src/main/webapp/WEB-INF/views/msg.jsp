@@ -25,32 +25,32 @@
 		<% if(session.getAttribute("grade") != null){
 			if((Integer)session.getAttribute("grade") < 3){ %>
 		
-		ÀüÃ¼ ¸Ş½ÃÁö °íÁö¼­
+		ì „ì²´ ê³ ì§€ì„œ ë©”ì‹œì§€
 			<form action='sendchargeall' method='post'>
 				to : <input type='text' id='to_user' name='to_user'><br/>
 				message : <input type='text' id='contents' name='contents'><br/>
 				billing : <input type='text' id='billing_price' name='billing_price'><br/>
-				<input type='submit' value='Àü¼Û'>
+				<input type='submit' value='ï¿½ï¿½ï¿½'>
 			</form>
-		ÀüÃ¼ ¸Ş½ÃÁö ÀÏ¹İ
+		ì „ì²´ ì¼ë°˜ ë©”ì‹œì§€
 			<form action='sendall' method='post'><br/>
 				to : <input type='text' id='to_user' name='to_user'><br/>
 				message : <input type='text' id='contents' name='contents'><br/>
-				<input type='submit' value='Àü¼Û'>
+				<input type='submit' value='ï¿½ï¿½ï¿½'>
 			</form>
 			
-		°íÁö¼­ ¸Ş½ÃÁö
+		ê³ ì§€ì„œ ë©”ì‹œì§€
 			<form action='sendcharge' method='post'><br/>
 				to : <input type='text' id='to_user' name='to_user'><br/>
 				message : <input type='text' id='contents' name='contents'><br/>
 				billing : <input type='text' id='billing_price' name='billing_price'><br/>
-				<input type='submit' value='Àü¼Û'>
+				<input type='submit' value='ï¿½ï¿½ï¿½'>
 			</form>
-		ÀÏ¹İ ¸Ş½ÃÁö
+		ì¼ë°˜ ë©”ì‹œì§€
 			<form action='sendplain' method='post'><br/>
 				to : <input type='text' id='to_user' name='to_user'><br/>
 				message : <input type='text' id='contents' name='contents'><br/>
-				<input type='submit' value='Àü¼Û'>
+				<input type='submit' value='ï¿½ï¿½ï¿½'>
 			</form>
 		<%} 
 		}%>
