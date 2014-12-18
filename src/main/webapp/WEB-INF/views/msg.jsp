@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Nppang</title>
 </head>
 <body>
 		<h3>Message</h3>
@@ -19,40 +19,48 @@
 					<%
 				}
 			}
-			
+
 		%>
-		
+
 		<% if(session.getAttribute("grade") != null){
 			if((Integer)session.getAttribute("grade") < 3){ %>
-		
-		전체 고지서 메시지
-			<form action='sendchargeall' method='post'>
-				to : <input type='text' id='to_user' name='to_user'><br/>
-				message : <input type='text' id='contents' name='contents'><br/>
-				billing : <input type='text' id='billing_price' name='billing_price'><br/>
-				<input type='submit' value='전송'>
+
+		<h3>전체 고지서 메시지</h3>
+	<form class="msg" action='sendchargeall' method='post'>
+				<p>to</p> <input type='text' id='to_user' name='to_user'><br/>
+				<p>message</p> <input type='text' id='contents' name='contents'><br/>
+				<p>billing</p> <input type='text' id='billing_price' name='billing_price'><br/>
+				<button type="submit" value="Submit"> 메세지보내기 </button>
 			</form>
-		전체 일반 메시지
-			<form action='sendall' method='post'><br/>
-				to : <input type='text' id='to_user' name='to_user'><br/>
-				message : <input type='text' id='contents' name='contents'><br/>
-				<input type='submit' value='전송'>
+		<h3>전체 일반 메시지</h3>
+			<form class="msg" action='sendall' method='post'><br/>
+				<p>to<p/><input type='text' id='to_user' name='to_user'><br/>
+				<p>message</p><input type='text' id='contents' name='contents'><br/>
+				<button type="submit" value="Submit"> 메세지보내기 </button>
 			</form>
-			
-		고지서 메시지
-			<form action='sendcharge' method='post'><br/>
-				to : <input type='text' id='to_user' name='to_user'><br/>
-				message : <input type='text' id='contents' name='contents'><br/>
-				billing : <input type='text' id='billing_price' name='billing_price'><br/>
-				<input type='submit' value='전송'>
+
+		<h3>고지서 메시지</h3>
+			<form class="msg" action='sendcharge' method='post'><br/>
+				<p>to</p><input type='text' id='to_user' name='to_user'><br/>
+				<p>message</p><input type='text' id='contents' name='contents'><br/>
+				<p>billing</p><input type='text' id='billing_price' name='billing_price'><br/>
+				<button type="submit" value="Submit"> 메세지보내기 </button>
 			</form>
-		일반 메시지
-			<form action='sendplain' method='post'><br/>
-				to : <input type='text' id='to_user' name='to_user'><br/>
-				message : <input type='text' id='contents' name='contents'><br/>
-				<input type='submit' value='전송'>
+		<h3>일반 메시지</h3>
+			<form class="msg" action='sendplain' method='post'><br/>
+				<p>to</p><input type='text' id='to_user' name='to_user'><br/>
+				<p>message</p><input type='text' id='contents' name='contents'><br/>
+				<button type="submit" value="Submit"> 메세지보내기 </button>
 			</form>
-		<%} 
+			<form class="m_account" action="insertlog" method="post">
+			<ul>
+				<li><p>user_id</p><input type="text" id="id" name="id"></li>
+				<li><p>금액</p><input type="text" id="money" name="money"></li>
+				<li><p>내용</p><input type="text" id="desc" name="desc"></li>
+			</ul>
+				<button type="submit" value="Submit"> 입력 </button>
+			</form>
+		<%}
 		}%>
 </body>
 </html>

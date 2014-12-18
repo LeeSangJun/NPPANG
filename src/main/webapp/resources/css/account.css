@@ -50,3 +50,16 @@ table tr td a{
 	margin: 0 10px;
 	font-family: 'Nanum Gothic', serif;
 }
+.m_account input{
+	width: 70px;
+	height: 20px;
+	padding: 2px;
+	border: solid 2px #2cba7c;
+}
+.m_account p{
+	font-family: 'Hanna', serif;
+}
+.m_account ul li{
+	text-decoration: none;
+	display: inline;
+}

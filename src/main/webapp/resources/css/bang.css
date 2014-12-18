@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 .m_function ul{
 	outline: none;
 	border: none;
@@ -10,12 +11,13 @@
 }
 .m_function ul a{
 	text-decoration: none;
+	font-family: 'Nanum Gothic', serif;
 }
 .m_function ul li{
 	display: inline;
 	text-align: -webkit-auto;
 	margin: 50px 30px;
-	text-align: 
+	text-align:
 }
 .m_function ul li img{
 	width: 180px;
@@ -27,6 +29,7 @@
     overflow: hidden;
     background: #fff;
     transition: background 0.3s ease-in-out;
+
 }
 .caption:hover{
 	background: rgba(0,0,0,0);
@@ -57,12 +60,12 @@
 	text-align: center;
     padding: 30px;
 }
- 
+
 .caption::after {
     content: '\201C' attr(data-description) '\201D';
     top: 40%;
     height: 60%;
-    font-family: 'Jejugothic', serif;
+    font-family: 'Nanum Gothic', serif;
     color: #fff;
     font-size: 14px;
     padding: 20px 30px;

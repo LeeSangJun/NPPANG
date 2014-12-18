@@ -9,6 +9,7 @@
 <title>Nppang</title>
 <link rel="stylesheet" type="text/css" href="resources/css/default.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/mypage.css" />
+<link rel="stylesheet" type="text/css" href="resources/css/account.css" />
 <script src="resources/js/modernizr.custom.js"></script>
 </head>
 <body>
@@ -81,11 +82,13 @@
 		</table>
 		입출금 내역 추가
 		<% if((Integer)(session.getAttribute("grade")) < 3){ %>
-			<form action="insertlog" method="post">
-				user_id :<input type="text" id="id" name="id">
-				money : <input type="text" id="money" name="money">
-				desc : <input type="text" id="desc" name="desc">
-				<input type="submit" value="전송">
+			<form class="m_account" action="insertlog" method="post">
+			<ul>
+				<li><p>user_id</p><input type="text" id="id" name="id"></li>
+				<li><p>금액</p><input type="text" id="money" name="money"></li>
+				<li><p>내용</p><input type="text" id="desc" name="desc"></li>
+			</ul>
+				<button type="submit" value="Submit"> 입력 </button>
 			</form>
 		<%} %>
 	</div>
