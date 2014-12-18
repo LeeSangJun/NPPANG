@@ -52,23 +52,6 @@
                         <input id="usernamesignup" name="name" type="text"/>
                     </p>
                     <p>
-<<<<<<< HEAD
-                        <label for="emailsignup" class="youmail"> Your email</label>
-                        <input id="emailsignup" name="email" required="required" type="email"/>
-                    </p>
-                    <p>
-                        <label for="passwordsignup" class="youpasswd">Your password </label>
-                        <input id="passwordsignup" name="pwd" required="required" type="password"/>
-                    </p>
-                    <p>
-                        <label for="descriptipon" class="description">introduce</label>
-                        <input id="description" name="description" required="required" type="text"/>
-                    </p>
-                    <p>
-                        <label for="photo" class="photo">photo(not serviced)</label>
-                        <input id="photo" name="photo" required="required" type="text"/>
-                    </p>
-=======
                         <label for="emailsignup" class="youmail" data-icon="email" >이메일</label>
                         <input id="emailsignup" name="email" required="required" type="email"/>
                     </p>
@@ -80,7 +63,6 @@
                         <label for="descriptipon" class="description" data-icon="desc">자기소개 </label>
                         <input id="description" name="description" required="required" type="text"/>
                     </p>
->>>>>>> eba287db374a17662a6e3a43193dc1777846537e
                     <p class="signin button">
 						<input type="submit" value="Sign up"/>
 					</p>
