@@ -8,6 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="resources/css/msg.css" />
 </head>
 <body>
+		<h3>Message</h3>
+		<% 	List<message_plain> msglist;
+			if((msglist = (List<message_plain>)request.getAttribute("msglist")) != null){
+				for(message_plain msg : msglist){
+					%>
+						<a href="#"><%=msg.getContents() %></a>
+
+					<%
+				}
+			}
+		%>
 		<h3>전체 고지서 메시지</h3>
 	<form class="msg" action='sendchargeall' method='post'>
 				<p>message</p> : <input type='text' id='contents' name='contents'><br/>

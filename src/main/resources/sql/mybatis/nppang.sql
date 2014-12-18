@@ -1,5 +1,6 @@
 create database nppang;
 use nppang;
+show tables;
 create table user_info (
 	id integer auto_increment primary key,
 	name varchar(30) not null,
@@ -49,6 +50,7 @@ create table message_charge(
 	contents text,
 	billing_price integer not null,
 	balance integer default 0,
+	moim_id integer not null,
 	date timestamp default current_timestamp,
 	constraint mc_to_user_id foreign key(to_user)
 	references user_info(id),
@@ -102,7 +104,7 @@ insert into financial_log(user_id, moim_id, money, description) values(4,1,10000
 insert into financial_log(user_id, moim_id, money, description) values(3,1,10000, "fee2");
 ALTER TABLE `nppang`.`user_info`
 CHARACTER SET = utf8 ;
-select * from financial_log;
-
 select * from financial_log where user_id = 1;
 select name, user_id, sum(money) from financial_log t1, user_info t2 where user_id = 3 and t1.user_id = t2.id;
+select * from financial_log;
+select * from message_plain;

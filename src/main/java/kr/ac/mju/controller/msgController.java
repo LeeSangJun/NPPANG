@@ -52,7 +52,7 @@ public class msgController {
 			System.out.println(list);
 			modelAndView.addObject("msg", list);
 			modelAndView.addObject("error", "모임을 찾음..");
-			modelAndView.setViewName("test_log");
+			modelAndView.setViewName("redirect:dashboard");
 		}else{
 			System.out.println("log_failed");
 			modelAndView.addObject("error", "해당 모임을 찾을 수 없읍니다.");
@@ -60,7 +60,7 @@ public class msgController {
 		}
 
 
-		modelAndView.setViewName("test_msg");
+		modelAndView.setViewName("redirect:dashboard");
 		return modelAndView;
 	}
 
@@ -92,7 +92,7 @@ public class msgController {
 		}else{
 			System.out.println("fail");
 		}
-		modelAndView.setViewName("test_msg");
+		modelAndView.setViewName("redirect:dashboard");
 
 		return modelAndView;
 	}
@@ -135,7 +135,7 @@ public class msgController {
 			}
 		//세션에서 받아오는 것으로 추후 수정
 		}
-		modelAndView.setViewName("test_msg");
+		modelAndView.setViewName("redirect:dashboard");
 
 		return modelAndView;
 	}
@@ -171,15 +171,15 @@ public class msgController {
 			System.out.println(list);
 			modelAndView.addObject("msg", list);
 			modelAndView.addObject("error", "모임을 찾음..");
-			modelAndView.setViewName("test_log");
+			modelAndView.setViewName("redirect:dashboard");
 		}else{
 			System.out.println("log_failed");
 			modelAndView.addObject("error", "해당 모임을 찾을 수 없읍니다.");
-			modelAndView.setViewName("test_msg");
+			modelAndView.setViewName("redirect:dashboard");
 		}
 
 
-		modelAndView.setViewName("test_msg");
+		modelAndView.setViewName("redirect:dashboard");
 		return modelAndView;
 	}
 
@@ -214,7 +214,7 @@ public class msgController {
 		}else{
 			System.out.println("fail");
 		}
-		modelAndView.setViewName("test_msg");
+		modelAndView.setViewName("redirect:dashboard");
 
 		return modelAndView;
 	}
@@ -260,7 +260,7 @@ public class msgController {
 			}
 		//세션에서 받아오는 것으로 추후 수정
 		}
-		modelAndView.setViewName("test_msg");
+		modelAndView.setViewName("redirect:dashboard");
 
 		return modelAndView;
 	}
