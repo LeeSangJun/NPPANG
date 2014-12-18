@@ -50,8 +50,8 @@ public class MoimController {
 		moim moim = new moim();
 		System.out.println(session.getAttribute("user_id"));
 		int leader_id = (Integer)session.getAttribute("user_id");
-		
-		
+
+
 		moim.setMoim_name(moim_name);
 		moim.setCategory(category);
 		moim.setPhoto(photo);
@@ -72,87 +72,5 @@ public class MoimController {
 		view.setViewName("redirect:dashboard");
 		return view;
 	}
-//	@RequestMapping(value = "/mymoim", method = RequestMethod.POST)
-//	public ModelAndView myMoim(
-//			HttpSession session
-//			){
-//
-//		/********중복코드*********/
-//		SqlSession sqlSession = MyBatisConnectionFactory.getInstance().openSession(true);	//mybatis 세션 연결
-//		moimDAO moimDAO = sqlSession.getMapper(moimDAO.class);	//Mapper연결
-//		/***************************/
-//		System.out.println("create_moim");
-//		ModelAndView view = new ModelAndView();
-//
-//		moim moim = new moim();
-//		user_info user = new user_info();
-//		System.out.println(session.getAttribute("user_id"));
-//		int user_id = (Integer)session.getAttribute("user_id");
-//		user.setId(user_id);
-//		
-//		List<moim> list = moimDAO.myMoim(user);
-//		
-//		if(list.isEmpty()){
-//			
-//		}
-//
-//		moimDAO.join_moim(moim_member);
-//
-//
-//		view.setViewName("redirect:dashboard");
-//		return view;
-//	}
 
-/*
-
-	@RequestMapping(value = "/login", method =RequestMethod.POST)
-	public ModelAndView user_login(
-			HttpSession session,
-			@RequestParam("userid") String email,
-			@RequestParam("password") String pwd
-			){
-
-		/********중복코드*********
-		SqlSession sqlSession = MyBatisConnectionFactory.getInstance().openSession(true);	//mybatis 세션 연결
-		userinfoDAO userinfo = sqlSession.getMapper(userinfoDAO.class);	//Mapper연결
-		*//***************************//*
-
-		ModelAndView modelAndView = new ModelAndView();
-
-		//insert Database
-		user_info user = new user_info();
-		user.setEmail(email);;
-		user.setPassword(pwd);
-
-			if(session.getAttribute("email") == null){		//login 여부 checking
-				if((user = userinfo.loginCheck(user)) != null){		//id - pwd 일치여부 확인
-					System.out.println("login_complete");
-					session.setAttribute("email", email);	//세션 할당
-					session.setAttribute("name", user.getName());
-					//modelAndView.addObject("name", session.getAttribute("name"));
-					modelAndView.setViewName("redirect:dashboard");
-				}else{
-					System.out.println("login_failed");
-					modelAndView.addObject("error", "login-error : please check your email or password");
-					modelAndView.setViewName("index");
-				}
-			}else{
-				//개인화 페이지로 이동
-				//modelAndView.addObject("name", session.getAttribute("name"));
-				modelAndView.setViewName("redirect:dashboard");
-			}
-		return modelAndView;
-	}
-
-
-
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public ModelAndView logout(HttpSession session, HttpServletRequest request) {
-		ModelAndView modelAndView = new ModelAndView();
-		session.invalidate();
-		modelAndView.setViewName("index");
-		return modelAndView;
-	}
-
-*/
 }

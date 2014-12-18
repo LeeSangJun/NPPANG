@@ -11,11 +11,21 @@ header{
 	font-family: 'Hanna', serif;
 	color: white;
 }
+
+
 nav a {
 	font-size: 25px;
 	padding: 0px 20px 20px 20px;
 	float: right;
+	color : white;
+	text-decoration: none;
 }
+
+nav a:hover{
+	color:blue;
+	text-decoration:none;
+}
+
 header > span {
 	position: relative;
 	font-size: 40px;

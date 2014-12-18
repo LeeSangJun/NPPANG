@@ -6,6 +6,7 @@ import java.util.Locale;
 
 import javax.servlet.http.HttpSession;
 
+import kr.ac.mju.dao.groupManagerDAO;
 import kr.ac.mju.dao.messageDAO;
 import kr.ac.mju.dao.moimDAO;
 import kr.ac.mju.dbconfig.MyBatisConnectionFactory;
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -38,7 +40,7 @@ public class HomeController {
 	public ModelAndView home(Locale locale, Model model, HttpSession session) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		ModelAndView modelAndView = new ModelAndView();
-		
+
 		if(session.getAttribute("name") != null){
 			modelAndView.setViewName("redirect:dashboard");
 		}else{
@@ -46,7 +48,7 @@ public class HomeController {
 		}
 		return modelAndView;
 	}
-	
+
 	public List<message_plain> getmsg(int to_user
 			){
 		/********중복코드**********/
@@ -66,11 +68,11 @@ public class HomeController {
 		}else{
 			System.out.println("msg_load_failed");
 		}
-		
+
 
 		return list;
 	}
-	
+
 	@RequestMapping(value = "/dashboard", method = RequestMethod.GET)
 	public ModelAndView dashboard(HttpSession session){
 		/********중복코드*********/
@@ -80,10 +82,10 @@ public class HomeController {
 		System.out.println("create_moim");
 		session.removeAttribute("moim");
 		session.removeAttribute("grade");
-		
+
 		moim moim = new moim();
 		moim_member moim_member = new moim_member();
-		
+
 		ModelAndView modelAndView = new ModelAndView();
 		System.out.println("dashboard");
 		if(session.getAttribute("name") == null){
@@ -92,7 +94,7 @@ public class HomeController {
 			System.out.println(session.getAttribute("user_id"));
 			int user_id = (Integer)session.getAttribute("user_id");
 			moim_member.setUser_id(user_id);
-			
+
 			List<moim_member> list = moimDAO.myMoim(moim_member);
 			List moimlist = new ArrayList<moim>();
 			if(!list.isEmpty()){
@@ -133,7 +135,6 @@ public class HomeController {
 	public ModelAndView moim_create(HttpSession session){
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("create");
-
 		return modelAndView;
 	}
 

@@ -130,7 +130,7 @@
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	position: relative;
-	font-family: 'Hanna', serif; 
+	font-family: 'Hanna', serif;
 }
 
 .search-bar h1 span::before,
@@ -151,3 +151,35 @@
 .search-bar h1 span::after {
 	left: 100%;
 }
+
+h1 span{
+	font-family: 'Hanna', serif;
+	padding-left:20px;
+}
+
+.member_list{
+	width:100%;
+	margin:20px;
+	padding:10px;
+}
+
+.name{
+	width:15%
+}
+
+.mail{
+	width:15%
+}
+
+.intro{
+	width:45%
+}
+
+.grade{
+	width:15%
+}
+
+.etc{
+	width:10%
+}
+

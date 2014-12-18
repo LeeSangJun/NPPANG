@@ -15,16 +15,14 @@
 				for(message_plain msg : msglist){
 					%>
 						<a href="#"><%=msg.getContents() %></a>
-
 					<%
 				}
 			}
-			
 		%>
-		
+
 		<% if(session.getAttribute("grade") != null){
 			if((Integer)session.getAttribute("grade") < 3){ %>
-		
+
 		전체 고지서 메시지
 			<form action='sendchargeall' method='post'>
 				to : <input type='text' id='to_user' name='to_user'><br/>
@@ -38,7 +36,7 @@
 				message : <input type='text' id='contents' name='contents'><br/>
 				<input type='submit' value='전송'>
 			</form>
-			
+
 		고지서 메시지
 			<form action='sendcharge' method='post'><br/>
 				to : <input type='text' id='to_user' name='to_user'><br/>
@@ -52,7 +50,7 @@
 				message : <input type='text' id='contents' name='contents'><br/>
 				<input type='submit' value='전송'>
 			</form>
-		<%} 
+		<%}
 		}%>
 </body>
 </html>

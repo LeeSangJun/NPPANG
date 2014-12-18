@@ -4,15 +4,20 @@
 <mapper namespace="kr.ac.mju.dao.groupManagerDAO">
 <!-- parameterType:마이바티스에게 전달하는 객체 또는 자료형 -->
 
+
 	<select id = "selectLog" resultType = "kr.ac.mju.model.financial_log">
 		select * from financial_log where moim_id = #{moim_id};
 	</select>
 	<select id = "getGrade" resultType = "kr.ac.mju.model.moim_member">
 		select * from moim_member where moim_id = #{moim_id} and user_id = #{user_id};
 	</select>
-	
+
 	<insert id = "insertLog" parameterType = "kr.ac.mju.model.financial_log" useGeneratedKeys = "true" keyProperty = "user_id">
 		INSERT INTO financial_log (user_id, moim_id, money, description) VALUES (#{user_id}, #{moim_id}, #{moim_id}, #{description});
 	</insert>
+
+	<select id ="get_Member" resultType = "kr.ac.mju.model.member_info">
+		select id, name, email, grade, description, balance from user_info inner join moim_member where moim_member.moim_id = #{moim_id};
+	</select>
 
 </mapper>

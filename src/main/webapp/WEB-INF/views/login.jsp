@@ -52,19 +52,19 @@
                         <input id="usernamesignup" name="name" type="text"/>
                     </p>
                     <p>
-                        <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
+                        <label for="emailsignup" class="youmail"> Your email</label>
                         <input id="emailsignup" name="email" required="required" type="email"/>
                     </p>
                     <p>
-                        <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                        <label for="passwordsignup" class="youpasswd">Your password </label>
                         <input id="passwordsignup" name="pwd" required="required" type="password"/>
                     </p>
                     <p>
-                        <label for="descriptipon" class="description" data-icon="p">Please confirm your password </label>
+                        <label for="descriptipon" class="description">introduce</label>
                         <input id="description" name="description" required="required" type="text"/>
                     </p>
                     <p>
-                        <label for="photo" class="photo" data-icon="p">Please confirm your password </label>
+                        <label for="photo" class="photo">photo(not serviced)</label>
                         <input id="photo" name="photo" required="required" type="text"/>
                     </p>
                     <p class="signin button">
