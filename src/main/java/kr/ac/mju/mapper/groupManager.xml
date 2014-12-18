@@ -17,7 +17,7 @@
 	</insert>
 
 	<select id ="get_Member" resultType = "kr.ac.mju.model.member_info">
-		select id, name, email, grade, description, balance from user_info inner join moim_member where moim_member.moim_id = #{moim_id};
+		select * from user_info join moim_member where moim_member.moim_id = #{moim_id} and user_info.id = moim_member.user_id;
 	</select>
 
 </mapper>

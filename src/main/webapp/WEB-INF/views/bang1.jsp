@@ -26,7 +26,7 @@
 	<ul>
 		<li><a class="caption" href="mlist" data-title="회원관리" data-description="우리 동아리의 회원들을 확인 할 수있습니다."><img src="resources/img/member.png"></a></li>
 		<li><a class="caption" href="account" data-title="장부관리" data-description="우리 동아리의 장부를 관리해 주세요."><img src="resources/img/moneybag.png"></a></li>
-		<li><a class="caption" href="search_m" data-title="초대하기" data-description="새로운 회원들을 초대하세요."><img src="resources/img/message.png"></a></li>
+		<li><a class="caption" href="invite" data-title="초대하기" data-description="새로운 회원들을 초대하세요."><img src="resources/img/message.png"></a></li>
 	</ul>
 </div>
 <div class ="notice">

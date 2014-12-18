@@ -228,6 +228,39 @@ public class groupManagerController {
 	}
 
 
+	@RequestMapping(value = "/invite", method = RequestMethod.GET)
+	public ModelAndView invite_page(HttpSession session){
+		/********중복코드**********/
+		SqlSession sqlSession = MyBatisConnectionFactory.getInstance().openSession(true);	//mybatis 세션 연결
+		messageDAO groupManager = sqlSession.getMapper(messageDAO.class);
+		/***************************/
+		ModelAndView modelAndView = new ModelAndView();
+
+		modelAndView.setViewName("search_m");
+		return modelAndView;
+	}
 
 
+	@RequestMapping(value = "/invite", method = RequestMethod.POST)
+	public ModelAndView invite_member(HttpSession session, @RequestParam(value="invite_list") List<Integer> invite_list){
+		/********중복코드**********/
+		SqlSession sqlSession = MyBatisConnectionFactory.getInstance().openSession(true);	//mybatis 세션 연결
+		messageDAO groupManager = sqlSession.getMapper(messageDAO.class);
+		/***************************/
+		ModelAndView modelAndView = new ModelAndView();
+
+		//초대메시지 목록 확인
+		for(int user_id: invite_list){
+			String msg = "모임에 초대되었습니다. 수락하시겠습니까? <button type = 'submit'>수락</button>";
+
+			message_plain massage = new message_plain();
+			massage.setContents(msg);
+			massage.setFrom_user((Integer)session.getAttribute("user_id"));
+			massage.setTo_user(user_id);
+			groupManager.sendPlainMsg(massage);
+		}
+		//메시지 작성(초대 url)
+		//메시지 DB에 넣기
+		return modelAndView;
+	}
 }

@@ -9,6 +9,8 @@
 <title>Nppang</title>
 <link rel="stylesheet" type="text/css" href="resources/css/default.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/mypage.css" />
+<link rel="stylesheet" type="text/css" href="resources/css/account.css" />
+
 <script src="resources/js/modernizr.custom.js"></script>
 </head>
 <body>

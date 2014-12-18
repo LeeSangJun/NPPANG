@@ -13,6 +13,8 @@ public interface userinfoDAO {
 
 	public user_info loginCheck(user_info user_info);
 
+	public List<user_info> search_member(String search_keyword);
+
 	/*
 	public void setSqlSession(SqlSession sqlSession){
 		this.sqlSession = sqlSession;

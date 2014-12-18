@@ -1,4 +1,4 @@
-@CHARSET "EUC-KR";
+@CHARSET "UTF-8";
 
 .left {
 	background-color: skyblue;
@@ -89,7 +89,7 @@ a:HOVER {
 	list-style-type: none;
 }
 
-/* ╟║©Н╣╔©║ фпЁн Ёж╠Б */
+/* Й╟─Л ╢К█╟Л≈░ М▄╗К└░ К└ёЙ╦╟ */
 .center-panel {
 	border: solid 15px #2cba7c;
 	width: 300px;
@@ -97,7 +97,7 @@ a:HOVER {
 	margin-top: 50px;
 }
 
-/* го╢э©║ div ╟Ма╓╫це╟╠Б */
+/* М∙≤К▀╗Л≈░ div ЙЁ═Л═∙Л▀°М┌╓Й╦╟ */
 .bottom {
 	position: fixed;
 	bottom: 0;
