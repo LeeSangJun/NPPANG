@@ -22,7 +22,7 @@
 					var obj = jQuery.parseJSON(data);
 					$("#search_result tbody").empty();
 					for(var user in obj){
-						$("#search_result tbody").append("<tr class ='user_id +"+obj[user].id+"''><td class = 'name'>"+obj[user].name+
+						$("#search_result tbody").append("<tr class ='user_id "+obj[user].id+"''><td class = 'name'>"+obj[user].name+
 								"</td><td class = 'mail'>"+obj[user].email+
 								"</td><td class = 'intro'>"+obj[user].description+
 								"</td></tr>");
@@ -33,8 +33,8 @@
 
 			$("#send_msg").click(function(){
 				$("#sortable2 .temp").remove();
-				var test = alert($("#tr .user_id").html());
-				alert(test);
+				var test = $("#sortable2 .user_id");
+				alert(test[0].classList[1]);
 			});
 
 
