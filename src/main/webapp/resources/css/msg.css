@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+.msg input{
+	width: 80%;
+	height: 20px;
+	padding: 2px;
+	border: solid 1px gray;
+	border-radius: 3px;
+}
+.msg p{
+	font-family: 'Hanna', serif; 
+	text-align: left;
+	margin: 0px 10px; 
+}
+h3{
+	font-family: 'Hanna', serif;
+	text-align: left;
+	margin: 0px 10px; 
+}
+button{
+	text-align: center;
+	width: 100px;
+	height: 30px;
+	font-size: 10px;
+	background-color: #2cba7c;
+	color: white;
+	font-family: "Hanna", serif;
+	border: none;
+}
+.m_account input{
+	width: 70px;
+	height: 20px;
+	padding: 2px;
+	border: solid 2px #2cba7c;
+}
+.m_account p{
+	font-family: 'Hanna', serif; 
+}
+.m_account ul li{
+	text-decoration: none;
+	display: inline;
+}
