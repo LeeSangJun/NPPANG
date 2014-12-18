@@ -24,7 +24,7 @@
 				<form action = "login" method = "post">
 					<h1>Login</h1>
 					<p>
-						<label class="uname">Your ID</label><input id="userid" name="userid" placeholder="User ID">
+						<label class="uname">Your Email</label><input id="userid" name="userid" placeholder="User ID">
 					</p>
 					<p>
 						<label class="pawssword">Your Password</label><input id="password" name="password" type="password"placeholder="User password">
@@ -48,10 +48,11 @@
 					 -->
                     <h1> Sign up </h1>
                     <p>
-                        <label for="usernamesignup" class="uname">Your username</label>
+                        <label for="usernamesignup" class="uname">사용자 이름</label>
                         <input id="usernamesignup" name="name" type="text"/>
                     </p>
                     <p>
+<<<<<<< HEAD
                         <label for="emailsignup" class="youmail"> Your email</label>
                         <input id="emailsignup" name="email" required="required" type="email"/>
                     </p>
@@ -67,6 +68,19 @@
                         <label for="photo" class="photo">photo(not serviced)</label>
                         <input id="photo" name="photo" required="required" type="text"/>
                     </p>
+=======
+                        <label for="emailsignup" class="youmail" data-icon="email" >이메일</label>
+                        <input id="emailsignup" name="email" required="required" type="email"/>
+                    </p>
+                    <p>
+                        <label for="passwordsignup" class="youpasswd" data-icon="pw">비밀번호 </label>
+                        <input id="passwordsignup" name="pwd" required="required" type="password"/>
+                    </p>
+                    <p>
+                        <label for="descriptipon" class="description" data-icon="desc">자기소개 </label>
+                        <input id="description" name="description" required="required" type="text"/>
+                    </p>
+>>>>>>> eba287db374a17662a6e3a43193dc1777846537e
                     <p class="signin button">
 						<input type="submit" value="Sign up"/>
 					</p>

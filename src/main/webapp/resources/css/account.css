@@ -1,9 +1,15 @@
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 .Atable{
 	float: right;
 	width: 56%;
+	margin-right:12%;
+}
+.accounInput{
+	float:right;
+	margin-right:12%;
 }
 
 .Atable h1 {
@@ -38,4 +44,36 @@
 
 .Atable h1 span::after {
 	left: 100%;
+}
+h3{
+	font-family: 'Hanna', serif;
+	padding-bottom: 8px;
+	border-bottom: 1px solid gray;
+	text-align: center;
+}
+table tr td a{
+	margin: 0 10px;
+	font-family: 'Nanum Gothic', serif;
+}
+.m_account input{
+	width: 100px;
+	height: 20px;
+	padding: 2px;
+	border: solid 2px #2cba7c;
+}
+#desc{
+	width: 300px;
+}
+.m_account p{
+	font-family: 'Hanna', serif;
+}
+ul li button{
+	margin-top:17px;
+	height:50px;
+}
+.m_account ul li{
+	text-decoration: none;
+	display: inline;
+	float : left;
+	margin-left: 50px;
 }

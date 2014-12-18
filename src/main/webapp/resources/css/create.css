@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
 form{
 	text-align: -webkit-center;
 }
@@ -27,7 +28,7 @@ form{
 	padding: 7%;
 }
 .m_image h2{
-	font-family: 'Hanna', serif; 
+	font-family: 'Hanna', serif;
 	color: #2cba7c;
 	font-size: 1.3em;
 	text-align: left;
@@ -49,7 +50,7 @@ form{
 	border-left-color: #2cba7c;
 }
 .m_text h2{
-	font-family: 'Hanna', serif; 
+	font-family: 'Hanna', serif;
 	color: #2cba7c;
 	font-size: 1.3em;
 	text-align: left;
