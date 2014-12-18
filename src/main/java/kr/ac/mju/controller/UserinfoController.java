@@ -26,8 +26,7 @@ public class UserinfoController {
 			@RequestParam("name") String name,
 			@RequestParam("email") String email,
 			@RequestParam("pwd") String pwd,
-			@RequestParam("description") String dec,
-			@RequestParam("photo") String photo
+			@RequestParam("description") String dec
 			){
 
 		/********중복코드**********/
@@ -41,7 +40,6 @@ public class UserinfoController {
 		user.setEmail(email);;
 		user.setPassword(pwd);
 		user.setDescription(dec);
-		user.setPhoto(photo);
 
 		userinfo.join(user);
 
