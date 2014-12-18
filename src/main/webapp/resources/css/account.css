@@ -5,6 +5,11 @@
 .Atable{
 	float: right;
 	width: 56%;
+	margin-right:12%;
+}
+.accounInput{
+	float:right;
+	margin-right:12%;
 }
 
 .Atable h1 {
@@ -51,15 +56,24 @@ table tr td a{
 	font-family: 'Nanum Gothic', serif;
 }
 .m_account input{
-	width: 70px;
+	width: 100px;
 	height: 20px;
 	padding: 2px;
 	border: solid 2px #2cba7c;
 }
+#desc{
+	width: 300px;
+}
 .m_account p{
 	font-family: 'Hanna', serif;
+}
+ul li button{
+	margin-top:17px;
+	height:50px;
 }
 .m_account ul li{
 	text-decoration: none;
 	display: inline;
+	float : left;
+	margin-left: 50px;
 }

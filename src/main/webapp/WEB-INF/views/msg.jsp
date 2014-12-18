@@ -6,6 +6,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" type="text/css" href="resources/css/msg.css" />
 <title>Nppang</title>
 </head>
 <body>
@@ -52,14 +54,7 @@
 				<p>message</p><input type='text' id='contents' name='contents'><br/>
 				<button type="submit" value="Submit"> 메세지보내기 </button>
 			</form>
-			<form class="m_account" action="insertlog" method="post">
-			<ul>
-				<li><p>user_id</p><input type="text" id="id" name="id"></li>
-				<li><p>금액</p><input type="text" id="money" name="money"></li>
-				<li><p>내용</p><input type="text" id="desc" name="desc"></li>
-			</ul>
-				<button type="submit" value="Submit"> 입력 </button>
-			</form>
+
 		<%}
 		}%>
 </body>
